@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ISW.Entidades;
 namespace ISW
 {
     static class Program
@@ -16,7 +16,7 @@ namespace ISW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InterfazPedidoDeLoQueSea());
+            Application.Run(new PrincipalForm());
         }
     }
 }

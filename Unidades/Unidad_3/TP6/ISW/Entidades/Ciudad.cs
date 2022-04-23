@@ -15,4 +15,7 @@ namespace ISW.Entidades
 
         string nombre { get; set; }
     }
+
+
+
 }
