@@ -21,3 +21,17 @@ C:\Users\micar\OneDrive\Documentos\GitHub\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\
 C:\Users\micar\OneDrive\Documentos\GitHub\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.DirecciónDestinoForm.resources
 C:\Users\micar\OneDrive\Documentos\GitHub\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.CiudadForm.resources
 C:\Users\micar\OneDrive\Documentos\GitHub\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.FormaPagoForm.resources
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.exe.config
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.exe
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.pdb
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.AssemblyReference.cache
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.CiudadForm.resources
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.DirecciónRetiroForm.resources
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.DirecciónDestinoForm.resources
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.FormaPagoForm.resources
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.PrincipalForm.resources
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Properties.Resources.resources
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.GenerateResource.cache
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.CoreCompileInputs.cache
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.exe
+E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.pdb
