@@ -29,10 +29,10 @@ namespace ISW.Entidades
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DireccionDestinoGroupBox = new System.Windows.Forms.GroupBox();
             this.ObligatorioDestinoNumeroLabel = new System.Windows.Forms.Label();
             this.ObligatorioCalleDestinoLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.IngresoDireccionDestinoLabel = new System.Windows.Forms.Label();
             this.ReferenciaDestinoLabel = new System.Windows.Forms.Label();
             this.NumeroDestinoTextBox = new System.Windows.Forms.TextBox();
             this.NumeroDestinoLabel = new System.Windows.Forms.Label();
@@ -41,30 +41,31 @@ namespace ISW.Entidades
             this.ReferenciaDestinoTextBox = new System.Windows.Forms.TextBox();
             this.ContinuarDirecciónDestinoButton = new System.Windows.Forms.Button();
             this.VolverDireccionDestinoButton = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.DireccionDestinoGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // DireccionDestinoGroupBox
             // 
-            this.groupBox1.Controls.Add(this.ObligatorioDestinoNumeroLabel);
-            this.groupBox1.Controls.Add(this.ObligatorioCalleDestinoLabel);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.ReferenciaDestinoLabel);
-            this.groupBox1.Controls.Add(this.NumeroDestinoTextBox);
-            this.groupBox1.Controls.Add(this.NumeroDestinoLabel);
-            this.groupBox1.Controls.Add(this.CalleDestinoTextBox);
-            this.groupBox1.Controls.Add(this.CalleDestinoLabel);
-            this.groupBox1.Controls.Add(this.ReferenciaDestinoTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(437, 313);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
+            this.DireccionDestinoGroupBox.Controls.Add(this.ObligatorioDestinoNumeroLabel);
+            this.DireccionDestinoGroupBox.Controls.Add(this.ObligatorioCalleDestinoLabel);
+            this.DireccionDestinoGroupBox.Controls.Add(this.IngresoDireccionDestinoLabel);
+            this.DireccionDestinoGroupBox.Controls.Add(this.ReferenciaDestinoLabel);
+            this.DireccionDestinoGroupBox.Controls.Add(this.NumeroDestinoTextBox);
+            this.DireccionDestinoGroupBox.Controls.Add(this.NumeroDestinoLabel);
+            this.DireccionDestinoGroupBox.Controls.Add(this.CalleDestinoTextBox);
+            this.DireccionDestinoGroupBox.Controls.Add(this.CalleDestinoLabel);
+            this.DireccionDestinoGroupBox.Controls.Add(this.ReferenciaDestinoTextBox);
+            this.DireccionDestinoGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.DireccionDestinoGroupBox.Name = "DireccionDestinoGroupBox";
+            this.DireccionDestinoGroupBox.Size = new System.Drawing.Size(437, 335);
+            this.DireccionDestinoGroupBox.TabIndex = 23;
+            this.DireccionDestinoGroupBox.TabStop = false;
             // 
             // ObligatorioDestinoNumeroLabel
             // 
             this.ObligatorioDestinoNumeroLabel.AutoSize = true;
             this.ObligatorioDestinoNumeroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioDestinoNumeroLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.ObligatorioDestinoNumeroLabel.Location = new System.Drawing.Point(48, 192);
             this.ObligatorioDestinoNumeroLabel.Name = "ObligatorioDestinoNumeroLabel";
             this.ObligatorioDestinoNumeroLabel.Size = new System.Drawing.Size(147, 21);
@@ -75,21 +76,22 @@ namespace ISW.Entidades
             // 
             this.ObligatorioCalleDestinoLabel.AutoSize = true;
             this.ObligatorioCalleDestinoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioCalleDestinoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.ObligatorioCalleDestinoLabel.Location = new System.Drawing.Point(48, 117);
             this.ObligatorioCalleDestinoLabel.Name = "ObligatorioCalleDestinoLabel";
             this.ObligatorioCalleDestinoLabel.Size = new System.Drawing.Size(147, 21);
             this.ObligatorioCalleDestinoLabel.TabIndex = 24;
             this.ObligatorioCalleDestinoLabel.Text = "*Campo obligatorio";
             // 
-            // label1
+            // IngresoDireccionDestinoLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(402, 45);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Ingrese dirección de destino";
+            this.IngresoDireccionDestinoLabel.AutoSize = true;
+            this.IngresoDireccionDestinoLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IngresoDireccionDestinoLabel.Location = new System.Drawing.Point(6, 16);
+            this.IngresoDireccionDestinoLabel.Name = "IngresoDireccionDestinoLabel";
+            this.IngresoDireccionDestinoLabel.Size = new System.Drawing.Size(402, 45);
+            this.IngresoDireccionDestinoLabel.TabIndex = 15;
+            this.IngresoDireccionDestinoLabel.Text = "Ingrese dirección de destino";
             // 
             // ReferenciaDestinoLabel
             // 
@@ -104,9 +106,9 @@ namespace ISW.Entidades
             // NumeroDestinoTextBox
             // 
             this.NumeroDestinoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroDestinoTextBox.Location = new System.Drawing.Point(124, 158);
+            this.NumeroDestinoTextBox.Location = new System.Drawing.Point(135, 158);
             this.NumeroDestinoTextBox.Name = "NumeroDestinoTextBox";
-            this.NumeroDestinoTextBox.Size = new System.Drawing.Size(212, 26);
+            this.NumeroDestinoTextBox.Size = new System.Drawing.Size(273, 26);
             this.NumeroDestinoTextBox.TabIndex = 17;
             this.NumeroDestinoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumeroDestinoTextBox_KeyPress);
             // 
@@ -123,9 +125,9 @@ namespace ISW.Entidades
             // CalleDestinoTextBox
             // 
             this.CalleDestinoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalleDestinoTextBox.Location = new System.Drawing.Point(96, 88);
+            this.CalleDestinoTextBox.Location = new System.Drawing.Point(107, 88);
             this.CalleDestinoTextBox.Name = "CalleDestinoTextBox";
-            this.CalleDestinoTextBox.Size = new System.Drawing.Size(240, 26);
+            this.CalleDestinoTextBox.Size = new System.Drawing.Size(301, 26);
             this.CalleDestinoTextBox.TabIndex = 16;
             // 
             // CalleDestinoLabel
@@ -141,18 +143,19 @@ namespace ISW.Entidades
             // ReferenciaDestinoTextBox
             // 
             this.ReferenciaDestinoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReferenciaDestinoTextBox.Location = new System.Drawing.Point(155, 233);
+            this.ReferenciaDestinoTextBox.Location = new System.Drawing.Point(155, 232);
+            this.ReferenciaDestinoTextBox.MaxLength = 100;
             this.ReferenciaDestinoTextBox.Multiline = true;
             this.ReferenciaDestinoTextBox.Name = "ReferenciaDestinoTextBox";
-            this.ReferenciaDestinoTextBox.Size = new System.Drawing.Size(253, 67);
+            this.ReferenciaDestinoTextBox.Size = new System.Drawing.Size(253, 86);
             this.ReferenciaDestinoTextBox.TabIndex = 18;
             // 
             // ContinuarDirecciónDestinoButton
             // 
-            this.ContinuarDirecciónDestinoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ContinuarDirecciónDestinoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.ContinuarDirecciónDestinoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContinuarDirecciónDestinoButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ContinuarDirecciónDestinoButton.Location = new System.Drawing.Point(241, 340);
+            this.ContinuarDirecciónDestinoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(212)))), ((int)(((byte)(113)))));
+            this.ContinuarDirecciónDestinoButton.Location = new System.Drawing.Point(257, 366);
             this.ContinuarDirecciónDestinoButton.Name = "ContinuarDirecciónDestinoButton";
             this.ContinuarDirecciónDestinoButton.Size = new System.Drawing.Size(192, 49);
             this.ContinuarDirecciónDestinoButton.TabIndex = 30;
@@ -162,10 +165,10 @@ namespace ISW.Entidades
             // 
             // VolverDireccionDestinoButton
             // 
-            this.VolverDireccionDestinoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.VolverDireccionDestinoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.VolverDireccionDestinoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VolverDireccionDestinoButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VolverDireccionDestinoButton.Location = new System.Drawing.Point(26, 340);
+            this.VolverDireccionDestinoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(255)))), ((int)(((byte)(241)))));
+            this.VolverDireccionDestinoButton.Location = new System.Drawing.Point(12, 366);
             this.VolverDireccionDestinoButton.Name = "VolverDireccionDestinoButton";
             this.VolverDireccionDestinoButton.Size = new System.Drawing.Size(197, 49);
             this.VolverDireccionDestinoButton.TabIndex = 31;
@@ -178,21 +181,21 @@ namespace ISW.Entidades
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(483, 401);
+            this.ClientSize = new System.Drawing.Size(463, 427);
             this.Controls.Add(this.VolverDireccionDestinoButton);
             this.Controls.Add(this.ContinuarDirecciónDestinoButton);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.DireccionDestinoGroupBox);
             this.Name = "DirecciónDestinoForm";
             this.Text = "Dirección de destino del pedido";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.DireccionDestinoGroupBox.ResumeLayout(false);
+            this.DireccionDestinoGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox DireccionDestinoGroupBox;
+        private System.Windows.Forms.Label IngresoDireccionDestinoLabel;
         private System.Windows.Forms.Label ReferenciaDestinoLabel;
         private System.Windows.Forms.TextBox NumeroDestinoTextBox;
         private System.Windows.Forms.Label NumeroDestinoLabel;

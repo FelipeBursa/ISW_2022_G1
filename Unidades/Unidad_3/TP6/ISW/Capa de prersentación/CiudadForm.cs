@@ -15,21 +15,22 @@ namespace ISW
     public partial class CiudadForm : Form
     {
         private bool ValidacionCiudad;
+
         private bool ValidacionDescripcion;
 
         public CiudadForm()
         {
-            InitializeComponent();                        
+            InitializeComponent();
+            TamañoLabel.Visible = false;
         }
 
         private void CargarDatos()
         //carga ciudades al combo 
         {
-            CiudadesComboBox.Items.Add(("Seleccione una ciudad..."));
-            CiudadesComboBox.Items.Add(("Cordoba"));
+            CiudadesComboBox.Items.Add(("Córdoba"));
             CiudadesComboBox.Items.Add(("Villa Carlos Paz"));
             CiudadesComboBox.Items.Add(("Villa Allende"));
-            CiudadesComboBox.SelectedIndex = 0;         
+            CiudadesComboBox.SelectedIndex = 1;         
         }
 
         private void ValidarCiudadCombo()
@@ -37,7 +38,8 @@ namespace ISW
         {
             if ((CiudadesComboBox.SelectedIndex == -1) || (CiudadesComboBox.SelectedIndex == 0))
             {
-                MessageBox.Show("Se debe seleccionar una ciudad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se debe seleccionar una ciudad", "Advertencia", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //No se cumple con la validación
                 ValidacionCiudad = false;
             }
@@ -50,12 +52,13 @@ namespace ISW
 
         public void ValidarCampoDescripción()
         {
-            if (DescripcionProductoTextBox.Text.Equals("") || DescripcionProductoTextBox.Text.Length > 50)
+            if (DescripcionProductoTextBox.Text.Equals(""))
             {
-                MessageBox.Show("La descripción es obligatoria y debe ser menor a 50 caracteres", "Advertencia",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La descripción es obligatoria y debe ser menor a 50 caracteres",
+                    "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //No se cumple con la validación
                 ValidacionDescripcion = false;
+                DescripcionProductoTextBox.Focus();
             }
             else
             {
@@ -71,10 +74,9 @@ namespace ISW
 
         private void ContinuarCiudadButtton_Click(object sender, EventArgs e)
         {
-            
             ValidarCampoDescripción();
             ValidarCiudadCombo();
-
+           
             if (ValidacionCiudad == true && ValidacionDescripcion == true)
             {
                 DirecciónRetiroForm ventana = new DirecciónRetiroForm();
@@ -83,30 +85,28 @@ namespace ISW
             }  
         }
 
-        private void cargarImagenBoton_Click(object sender, EventArgs e)
+        private void CargarImagenBoton_Click(object sender, EventArgs e)
         {
             OpenFileDialog abrirImagen = new OpenFileDialog();
             abrirImagen.Filter = "Image files (*.jpg) | *.jpg;";
 
-     
-            if (abrirImagen.ShowDialog() == DialogResult.OK){
+            if (abrirImagen.ShowDialog() == DialogResult.OK)
+            {
+                FileInfo info = new FileInfo(abrirImagen.FileName);
+                TamañoLabel.Text = "Tamaño imagen seleccionada: " +
+                    (info.Length * 0.000001).ToString() + " MB";
 
-                
-                FileInfo info = new FileInfo (abrirImagen.FileName);
-                label1.Text = "Tamaño imagen seleccionada :" + (info.Length* 0.000001).ToString()+" MB";
-
-                if (info.Length* 0.000001 > 5)
+                if (info.Length * 0.000001 > 5) //Validación para mostrar imagen
                 {
-                    MessageBox.Show("La Imagen seleccionada supera el limite de tamaño de 5mb . ");
-                    //abrirImagen = null;
-                    //imagenPictureBox = null;
+                    MessageBox.Show("La Imagen seleccionada supera el limite de tamaño de 5MB",
+                        "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    imagenPictureBox.ImageLocation = abrirImagen.FileName;
-                    imagenPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                }       
-                
+                    ImagenPictureBox.ImageLocation = abrirImagen.FileName;
+                    ImagenPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    TamañoLabel.Visible = true;
+                }
             }
         }
     }

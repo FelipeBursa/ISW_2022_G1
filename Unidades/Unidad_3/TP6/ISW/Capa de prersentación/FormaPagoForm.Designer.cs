@@ -31,7 +31,7 @@ namespace ISW.Entidades
         {
             this.MontoTextBox = new System.Windows.Forms.TextBox();
             this.MontoLabel = new System.Windows.Forms.Label();
-            this.FormaPagoLbl = new System.Windows.Forms.Label();
+            this.FormaPagoLabel = new System.Windows.Forms.Label();
             this.FormaPagoComboBox = new System.Windows.Forms.ComboBox();
             this.ConfirmarPedidoButton = new System.Windows.Forms.Button();
             this.EfectivoGroupBox = new System.Windows.Forms.GroupBox();
@@ -39,6 +39,7 @@ namespace ISW.Entidades
             this.MontoPagaClienteTextBox = new System.Windows.Forms.TextBox();
             this.MontoPagaClienteLabel = new System.Windows.Forms.Label();
             this.TarjetaVisaGroupBox = new System.Windows.Forms.GroupBox();
+            this.AdvertenciaTarjetaLabel = new System.Windows.Forms.Label();
             this.CodigoSeguridadTextBox = new System.Windows.Forms.TextBox();
             this.FechaVencimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CodigoSeguridadLabel = new System.Windows.Forms.Label();
@@ -47,10 +48,15 @@ namespace ISW.Entidades
             this.NumeroTarjetaLabel = new System.Windows.Forms.Label();
             this.NombreTitularTarjetaTextBox = new System.Windows.Forms.TextBox();
             this.NombreTitutarTarjetaLabel = new System.Windows.Forms.Label();
+            this.VolverDireccionDestinoButton = new System.Windows.Forms.Button();
             this.FechaRecibidaLabel = new System.Windows.Forms.Label();
+            this.ProgramadoRadioButton = new System.Windows.Forms.RadioButton();
             this.FechaRecibidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.InmediatoRadioButton = new System.Windows.Forms.RadioButton();
+            this.FechaRecibidaGroupBox = new System.Windows.Forms.GroupBox();
             this.EfectivoGroupBox.SuspendLayout();
             this.TarjetaVisaGroupBox.SuspendLayout();
+            this.FechaRecibidaGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // MontoTextBox
@@ -71,15 +77,15 @@ namespace ISW.Entidades
             this.MontoLabel.TabIndex = 31;
             this.MontoLabel.Text = "Monto de envio:";
             // 
-            // FormaPagoLbl
+            // FormaPagoLabel
             // 
-            this.FormaPagoLbl.AutoSize = true;
-            this.FormaPagoLbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormaPagoLbl.Location = new System.Drawing.Point(12, 98);
-            this.FormaPagoLbl.Name = "FormaPagoLbl";
-            this.FormaPagoLbl.Size = new System.Drawing.Size(199, 32);
-            this.FormaPagoLbl.TabIndex = 28;
-            this.FormaPagoLbl.Text = "Métodos de pago:";
+            this.FormaPagoLabel.AutoSize = true;
+            this.FormaPagoLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormaPagoLabel.Location = new System.Drawing.Point(12, 98);
+            this.FormaPagoLabel.Name = "FormaPagoLabel";
+            this.FormaPagoLabel.Size = new System.Drawing.Size(199, 32);
+            this.FormaPagoLabel.TabIndex = 28;
+            this.FormaPagoLabel.Text = "Métodos de pago:";
             // 
             // FormaPagoComboBox
             // 
@@ -93,11 +99,12 @@ namespace ISW.Entidades
             // 
             // ConfirmarPedidoButton
             // 
-            this.ConfirmarPedidoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ConfirmarPedidoButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmarPedidoButton.Location = new System.Drawing.Point(304, 609);
+            this.ConfirmarPedidoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
+            this.ConfirmarPedidoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmarPedidoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(212)))), ((int)(((byte)(113)))));
+            this.ConfirmarPedidoButton.Location = new System.Drawing.Point(295, 537);
             this.ConfirmarPedidoButton.Name = "ConfirmarPedidoButton";
-            this.ConfirmarPedidoButton.Size = new System.Drawing.Size(210, 46);
+            this.ConfirmarPedidoButton.Size = new System.Drawing.Size(243, 49);
             this.ConfirmarPedidoButton.TabIndex = 32;
             this.ConfirmarPedidoButton.Text = "Confirmar Pedido";
             this.ConfirmarPedidoButton.UseVisualStyleBackColor = false;
@@ -108,9 +115,9 @@ namespace ISW.Entidades
             this.EfectivoGroupBox.Controls.Add(this.TarjetaGroupBox);
             this.EfectivoGroupBox.Controls.Add(this.MontoPagaClienteTextBox);
             this.EfectivoGroupBox.Controls.Add(this.MontoPagaClienteLabel);
-            this.EfectivoGroupBox.Location = new System.Drawing.Point(22, 158);
+            this.EfectivoGroupBox.Location = new System.Drawing.Point(18, 158);
             this.EfectivoGroupBox.Name = "EfectivoGroupBox";
-            this.EfectivoGroupBox.Size = new System.Drawing.Size(475, 73);
+            this.EfectivoGroupBox.Size = new System.Drawing.Size(552, 73);
             this.EfectivoGroupBox.TabIndex = 33;
             this.EfectivoGroupBox.TabStop = false;
             // 
@@ -127,7 +134,7 @@ namespace ISW.Entidades
             this.MontoPagaClienteTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MontoPagaClienteTextBox.Location = new System.Drawing.Point(359, 25);
             this.MontoPagaClienteTextBox.Name = "MontoPagaClienteTextBox";
-            this.MontoPagaClienteTextBox.Size = new System.Drawing.Size(100, 29);
+            this.MontoPagaClienteTextBox.Size = new System.Drawing.Size(172, 29);
             this.MontoPagaClienteTextBox.TabIndex = 30;
             // 
             // MontoPagaClienteLabel
@@ -142,6 +149,7 @@ namespace ISW.Entidades
             // 
             // TarjetaVisaGroupBox
             // 
+            this.TarjetaVisaGroupBox.Controls.Add(this.AdvertenciaTarjetaLabel);
             this.TarjetaVisaGroupBox.Controls.Add(this.CodigoSeguridadTextBox);
             this.TarjetaVisaGroupBox.Controls.Add(this.FechaVencimientoDateTimePicker);
             this.TarjetaVisaGroupBox.Controls.Add(this.CodigoSeguridadLabel);
@@ -150,33 +158,44 @@ namespace ISW.Entidades
             this.TarjetaVisaGroupBox.Controls.Add(this.NumeroTarjetaLabel);
             this.TarjetaVisaGroupBox.Controls.Add(this.NombreTitularTarjetaTextBox);
             this.TarjetaVisaGroupBox.Controls.Add(this.NombreTitutarTarjetaLabel);
-            this.TarjetaVisaGroupBox.Location = new System.Drawing.Point(18, 258);
+            this.TarjetaVisaGroupBox.Location = new System.Drawing.Point(18, 133);
             this.TarjetaVisaGroupBox.Name = "TarjetaVisaGroupBox";
-            this.TarjetaVisaGroupBox.Size = new System.Drawing.Size(496, 207);
+            this.TarjetaVisaGroupBox.Size = new System.Drawing.Size(552, 225);
             this.TarjetaVisaGroupBox.TabIndex = 34;
             this.TarjetaVisaGroupBox.TabStop = false;
+            // 
+            // AdvertenciaTarjetaLabel
+            // 
+            this.AdvertenciaTarjetaLabel.AutoSize = true;
+            this.AdvertenciaTarjetaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdvertenciaTarjetaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.AdvertenciaTarjetaLabel.Location = new System.Drawing.Point(206, 104);
+            this.AdvertenciaTarjetaLabel.Name = "AdvertenciaTarjetaLabel";
+            this.AdvertenciaTarjetaLabel.Size = new System.Drawing.Size(0, 16);
+            this.AdvertenciaTarjetaLabel.TabIndex = 10;
             // 
             // CodigoSeguridadTextBox
             // 
             this.CodigoSeguridadTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodigoSeguridadTextBox.Location = new System.Drawing.Point(206, 150);
+            this.CodigoSeguridadTextBox.Location = new System.Drawing.Point(205, 178);
+            this.CodigoSeguridadTextBox.MaxLength = 3;
             this.CodigoSeguridadTextBox.Name = "CodigoSeguridadTextBox";
-            this.CodigoSeguridadTextBox.Size = new System.Drawing.Size(271, 29);
+            this.CodigoSeguridadTextBox.Size = new System.Drawing.Size(326, 29);
             this.CodigoSeguridadTextBox.TabIndex = 9;
             // 
             // FechaVencimientoDateTimePicker
             // 
             this.FechaVencimientoDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaVencimientoDateTimePicker.Location = new System.Drawing.Point(206, 115);
+            this.FechaVencimientoDateTimePicker.Location = new System.Drawing.Point(206, 132);
             this.FechaVencimientoDateTimePicker.Name = "FechaVencimientoDateTimePicker";
-            this.FechaVencimientoDateTimePicker.Size = new System.Drawing.Size(273, 29);
+            this.FechaVencimientoDateTimePicker.Size = new System.Drawing.Size(326, 29);
             this.FechaVencimientoDateTimePicker.TabIndex = 8;
             // 
             // CodigoSeguridadLabel
             // 
             this.CodigoSeguridadLabel.AutoSize = true;
             this.CodigoSeguridadLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodigoSeguridadLabel.Location = new System.Drawing.Point(10, 154);
+            this.CodigoSeguridadLabel.Location = new System.Drawing.Point(9, 178);
             this.CodigoSeguridadLabel.Name = "CodigoSeguridadLabel";
             this.CodigoSeguridadLabel.Size = new System.Drawing.Size(192, 25);
             this.CodigoSeguridadLabel.TabIndex = 7;
@@ -186,15 +205,17 @@ namespace ISW.Entidades
             // 
             this.NumeroTarjetaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumeroTarjetaTextBox.Location = new System.Drawing.Point(206, 72);
+            this.NumeroTarjetaTextBox.MaxLength = 16;
             this.NumeroTarjetaTextBox.Name = "NumeroTarjetaTextBox";
-            this.NumeroTarjetaTextBox.Size = new System.Drawing.Size(273, 29);
+            this.NumeroTarjetaTextBox.Size = new System.Drawing.Size(326, 29);
             this.NumeroTarjetaTextBox.TabIndex = 4;
+            this.NumeroTarjetaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumeroTarjetaTextBox_KeyPress);
             // 
             // FechaVencimientoLabel
             // 
             this.FechaVencimientoLabel.AutoSize = true;
             this.FechaVencimientoLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaVencimientoLabel.Location = new System.Drawing.Point(10, 115);
+            this.FechaVencimientoLabel.Location = new System.Drawing.Point(6, 132);
             this.FechaVencimientoLabel.Name = "FechaVencimientoLabel";
             this.FechaVencimientoLabel.Size = new System.Drawing.Size(195, 25);
             this.FechaVencimientoLabel.TabIndex = 3;
@@ -204,7 +225,7 @@ namespace ISW.Entidades
             // 
             this.NumeroTarjetaLabel.AutoSize = true;
             this.NumeroTarjetaLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroTarjetaLabel.Location = new System.Drawing.Point(10, 72);
+            this.NumeroTarjetaLabel.Location = new System.Drawing.Point(10, 75);
             this.NumeroTarjetaLabel.Name = "NumeroTarjetaLabel";
             this.NumeroTarjetaLabel.Size = new System.Drawing.Size(190, 25);
             this.NumeroTarjetaLabel.TabIndex = 2;
@@ -215,7 +236,7 @@ namespace ISW.Entidades
             this.NombreTitularTarjetaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreTitularTarjetaTextBox.Location = new System.Drawing.Point(273, 33);
             this.NombreTitularTarjetaTextBox.Name = "NombreTitularTarjetaTextBox";
-            this.NombreTitularTarjetaTextBox.Size = new System.Drawing.Size(206, 29);
+            this.NombreTitularTarjetaTextBox.Size = new System.Drawing.Size(259, 29);
             this.NombreTitularTarjetaTextBox.TabIndex = 1;
             // 
             // NombreTitutarTarjetaLabel
@@ -228,38 +249,90 @@ namespace ISW.Entidades
             this.NombreTitutarTarjetaLabel.TabIndex = 0;
             this.NombreTitutarTarjetaLabel.Text = "Nombre y Apellido del titular: ";
             // 
+            // VolverDireccionDestinoButton
+            // 
+            this.VolverDireccionDestinoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
+            this.VolverDireccionDestinoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VolverDireccionDestinoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(255)))), ((int)(((byte)(241)))));
+            this.VolverDireccionDestinoButton.Location = new System.Drawing.Point(93, 537);
+            this.VolverDireccionDestinoButton.Name = "VolverDireccionDestinoButton";
+            this.VolverDireccionDestinoButton.Size = new System.Drawing.Size(197, 49);
+            this.VolverDireccionDestinoButton.TabIndex = 37;
+            this.VolverDireccionDestinoButton.Text = "Volver";
+            this.VolverDireccionDestinoButton.UseVisualStyleBackColor = false;
+            this.VolverDireccionDestinoButton.Click += new System.EventHandler(this.VolverDireccionDestinoButton_Click);
+            // 
             // FechaRecibidaLabel
             // 
             this.FechaRecibidaLabel.AutoSize = true;
             this.FechaRecibidaLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaRecibidaLabel.Location = new System.Drawing.Point(12, 496);
+            this.FechaRecibidaLabel.Location = new System.Drawing.Point(5, 16);
             this.FechaRecibidaLabel.Name = "FechaRecibidaLabel";
             this.FechaRecibidaLabel.Size = new System.Drawing.Size(355, 32);
-            this.FechaRecibidaLabel.TabIndex = 35;
+            this.FechaRecibidaLabel.TabIndex = 41;
             this.FechaRecibidaLabel.Text = "¿Cúando desea recibir el pedido?";
+            // 
+            // ProgramadoRadioButton
+            // 
+            this.ProgramadoRadioButton.AutoSize = true;
+            this.ProgramadoRadioButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramadoRadioButton.Location = new System.Drawing.Point(19, 85);
+            this.ProgramadoRadioButton.Name = "ProgramadoRadioButton";
+            this.ProgramadoRadioButton.Size = new System.Drawing.Size(204, 29);
+            this.ProgramadoRadioButton.TabIndex = 44;
+            this.ProgramadoRadioButton.TabStop = true;
+            this.ProgramadoRadioButton.Text = "Entrega programada";
+            this.ProgramadoRadioButton.UseVisualStyleBackColor = true;
+            this.ProgramadoRadioButton.CheckedChanged += new System.EventHandler(this.ProgramadoRadioButton_CheckedChanged);
             // 
             // FechaRecibidaDateTimePicker
             // 
+            this.FechaRecibidaDateTimePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlLight;
             this.FechaRecibidaDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaRecibidaDateTimePicker.Location = new System.Drawing.Point(51, 541);
+            this.FechaRecibidaDateTimePicker.Location = new System.Drawing.Point(14, 138);
             this.FechaRecibidaDateTimePicker.Name = "FechaRecibidaDateTimePicker";
-            this.FechaRecibidaDateTimePicker.Size = new System.Drawing.Size(273, 29);
-            this.FechaRecibidaDateTimePicker.TabIndex = 36;
+            this.FechaRecibidaDateTimePicker.Size = new System.Drawing.Size(289, 29);
+            this.FechaRecibidaDateTimePicker.TabIndex = 42;
+            // 
+            // InmediatoRadioButton
+            // 
+            this.InmediatoRadioButton.AutoSize = true;
+            this.InmediatoRadioButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InmediatoRadioButton.Location = new System.Drawing.Point(19, 50);
+            this.InmediatoRadioButton.Name = "InmediatoRadioButton";
+            this.InmediatoRadioButton.Size = new System.Drawing.Size(232, 29);
+            this.InmediatoRadioButton.TabIndex = 43;
+            this.InmediatoRadioButton.TabStop = true;
+            this.InmediatoRadioButton.Text = "Entrega lo antes posible";
+            this.InmediatoRadioButton.UseVisualStyleBackColor = true;
+            this.InmediatoRadioButton.CheckedChanged += new System.EventHandler(this.InmediatoRadioButton_CheckedChanged);
+            // 
+            // FechaRecibidaGroupBox
+            // 
+            this.FechaRecibidaGroupBox.Controls.Add(this.FechaRecibidaLabel);
+            this.FechaRecibidaGroupBox.Controls.Add(this.ProgramadoRadioButton);
+            this.FechaRecibidaGroupBox.Controls.Add(this.FechaRecibidaDateTimePicker);
+            this.FechaRecibidaGroupBox.Controls.Add(this.InmediatoRadioButton);
+            this.FechaRecibidaGroupBox.Location = new System.Drawing.Point(16, 364);
+            this.FechaRecibidaGroupBox.Name = "FechaRecibidaGroupBox";
+            this.FechaRecibidaGroupBox.Size = new System.Drawing.Size(554, 185);
+            this.FechaRecibidaGroupBox.TabIndex = 46;
+            this.FechaRecibidaGroupBox.TabStop = false;
             // 
             // FormaPagoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(543, 667);
-            this.Controls.Add(this.FechaRecibidaDateTimePicker);
-            this.Controls.Add(this.FechaRecibidaLabel);
+            this.ClientSize = new System.Drawing.Size(582, 598);
+            this.Controls.Add(this.FechaRecibidaGroupBox);
+            this.Controls.Add(this.VolverDireccionDestinoButton);
             this.Controls.Add(this.TarjetaVisaGroupBox);
             this.Controls.Add(this.EfectivoGroupBox);
             this.Controls.Add(this.ConfirmarPedidoButton);
             this.Controls.Add(this.MontoTextBox);
             this.Controls.Add(this.MontoLabel);
-            this.Controls.Add(this.FormaPagoLbl);
+            this.Controls.Add(this.FormaPagoLabel);
             this.Controls.Add(this.FormaPagoComboBox);
             this.Name = "FormaPagoForm";
             this.Text = "Formas de pago";
@@ -267,6 +340,8 @@ namespace ISW.Entidades
             this.EfectivoGroupBox.PerformLayout();
             this.TarjetaVisaGroupBox.ResumeLayout(false);
             this.TarjetaVisaGroupBox.PerformLayout();
+            this.FechaRecibidaGroupBox.ResumeLayout(false);
+            this.FechaRecibidaGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,7 +351,7 @@ namespace ISW.Entidades
 
         private System.Windows.Forms.TextBox MontoTextBox;
         private System.Windows.Forms.Label MontoLabel;
-        private System.Windows.Forms.Label FormaPagoLbl;
+        private System.Windows.Forms.Label FormaPagoLabel;
         private System.Windows.Forms.ComboBox FormaPagoComboBox;
         private System.Windows.Forms.Button ConfirmarPedidoButton;
         private System.Windows.Forms.GroupBox EfectivoGroupBox;
@@ -292,7 +367,12 @@ namespace ISW.Entidades
         private System.Windows.Forms.Label NumeroTarjetaLabel;
         private System.Windows.Forms.TextBox NombreTitularTarjetaTextBox;
         private System.Windows.Forms.Label NombreTitutarTarjetaLabel;
+        private System.Windows.Forms.Button VolverDireccionDestinoButton;
         private System.Windows.Forms.Label FechaRecibidaLabel;
+        private System.Windows.Forms.RadioButton ProgramadoRadioButton;
         private System.Windows.Forms.DateTimePicker FechaRecibidaDateTimePicker;
+        private System.Windows.Forms.RadioButton InmediatoRadioButton;
+        private System.Windows.Forms.GroupBox FechaRecibidaGroupBox;
+        private System.Windows.Forms.Label AdvertenciaTarjetaLabel;
     }
 }

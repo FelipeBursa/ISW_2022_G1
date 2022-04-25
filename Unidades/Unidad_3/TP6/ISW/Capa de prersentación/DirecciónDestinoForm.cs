@@ -13,6 +13,7 @@ namespace ISW.Entidades
     public partial class DirecciónDestinoForm : Form
     {
         bool ValidacionDestino;
+
         public DirecciónDestinoForm()
         {
             InitializeComponent();
@@ -29,10 +30,12 @@ namespace ISW.Entidades
         //valida que todos los campos obligatorios sean completados
         private void ValidarCampos()
         {
-            if ((CalleDestinoTextBox.Text.Equals("")) || (NumeroDestinoTextBox.Text.Equals("")) || (ReferenciaDestinoTextBox.Text.Length > 100))
+            if ((CalleDestinoTextBox.Text.Equals("")) || (NumeroDestinoTextBox.Text.Equals("")) ||
+                (ReferenciaDestinoTextBox.Text.Length > 100))
             {
-                MessageBox.Show("Se deben completar todos los campos obligatorios y asegurese que la referencia no supere los 100 caracteres",
+                MessageBox.Show("Se deben completar todos los campos obligatorios.", 
                     "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 if (CalleDestinoTextBox.Text.Equals(""))
                 {
                     CalleDestinoTextBox.Focus();
@@ -51,6 +54,7 @@ namespace ISW.Entidades
         private void ContinuarDirecciónDestinoButton_Click(object sender, EventArgs e)
         {           
             ValidarCampos();
+
             if (ValidacionDestino == true)
             {
                 FormaPagoForm ventana = new FormaPagoForm();

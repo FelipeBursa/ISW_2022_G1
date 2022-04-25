@@ -52,3 +52,17 @@ C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.c
 C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.exe
 C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.pdb
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.exe.config
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.exe
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.pdb
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.AssemblyReference.cache
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.CiudadForm.resources
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.DirecciónRetiroForm.resources
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.DirecciónDestinoForm.resources
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.FormaPagoForm.resources
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.PrincipalForm.resources
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Properties.Resources.resources
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.GenerateResource.cache
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.CoreCompileInputs.cache
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.exe
+C:\Users\micar\OneDrive\Documentos\GIT ISW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.pdb

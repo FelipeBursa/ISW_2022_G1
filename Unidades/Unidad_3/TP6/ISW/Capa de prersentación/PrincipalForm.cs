@@ -17,7 +17,7 @@ namespace ISW.Entidades
             InitializeComponent();
         }
 
-        private void deLoQueSeaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeLoQueSeaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CiudadForm ventana = new CiudadForm();
             ventana.Show();
