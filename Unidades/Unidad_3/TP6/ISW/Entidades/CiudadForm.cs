@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,6 +81,33 @@ namespace ISW
                 ventana.Show();
                 this.Hide();
             }  
+        }
+
+        private void cargarImagenBoton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog abrirImagen = new OpenFileDialog();
+            abrirImagen.Filter = "Image files (*.jpg) | *.jpg;";
+
+     
+            if (abrirImagen.ShowDialog() == DialogResult.OK){
+
+                
+                FileInfo info = new FileInfo (abrirImagen.FileName);
+                label1.Text = "Tamaño imagen seleccionada :" + (info.Length* 0.000001).ToString()+" MB";
+
+                if (info.Length* 0.000001 > 5)
+                {
+                    MessageBox.Show("La Imagen seleccionada supera el limite de tamaño de 5mb . ");
+                    //abrirImagen = null;
+                    //imagenPictureBox = null;
+                }
+                else
+                {
+                    imagenPictureBox.ImageLocation = abrirImagen.FileName;
+                    imagenPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                }       
+                
+            }
         }
     }
 }

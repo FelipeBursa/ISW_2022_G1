@@ -35,3 +35,20 @@ E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\o
 E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.CoreCompileInputs.cache
 E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.exe
 E:\Documents\facultad\Acuartoaño\ING SW\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.pdb
+G:\Mi unidad\1- Facultad\4TO\4to 22\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.AssemblyReference.cache
+G:\Mi unidad\1- Facultad\4TO\4to 22\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.exe
+G:\Mi unidad\1- Facultad\4TO\4to 22\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.pdb
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.exe.config
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.exe
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\bin\Debug\ISW.pdb
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.CiudadForm.resources
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.DirecciónRetiroForm.resources
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.DirecciónDestinoForm.resources
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.FormaPagoForm.resources
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Entidades.PrincipalForm.resources
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.Properties.Resources.resources
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.exe
+C:\Users\Usuario\Documents\ISW_2022_G1\Unidades\Unidad_3\TP6\ISW\obj\Debug\ISW.pdb

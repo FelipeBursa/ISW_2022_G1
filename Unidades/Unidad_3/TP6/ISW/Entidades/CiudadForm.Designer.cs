@@ -39,9 +39,13 @@ namespace ISW
             this.ObligatorioCiudadLabel = new System.Windows.Forms.Label();
             this.ContinuarCiudadButtton = new System.Windows.Forms.Button();
             this.ProductoGrb = new System.Windows.Forms.GroupBox();
+            this.imagenPictureBox = new System.Windows.Forms.PictureBox();
+            this.cargarImagenBoton = new System.Windows.Forms.Button();
             this.ObligatorioDescripcionLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.CiudadGrb.SuspendLayout();
             this.ProductoGrb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // DeliveryEatLbl
@@ -140,12 +144,33 @@ namespace ISW
             // 
             // ProductoGrb
             // 
+            this.ProductoGrb.Controls.Add(this.label1);
+            this.ProductoGrb.Controls.Add(this.imagenPictureBox);
+            this.ProductoGrb.Controls.Add(this.cargarImagenBoton);
             this.ProductoGrb.Controls.Add(this.FotoLabel);
-            this.ProductoGrb.Location = new System.Drawing.Point(443, 99);
+            this.ProductoGrb.Location = new System.Drawing.Point(450, 52);
             this.ProductoGrb.Name = "ProductoGrb";
-            this.ProductoGrb.Size = new System.Drawing.Size(270, 91);
+            this.ProductoGrb.Size = new System.Drawing.Size(291, 221);
             this.ProductoGrb.TabIndex = 25;
             this.ProductoGrb.TabStop = false;
+            // 
+            // imagenPictureBox
+            // 
+            this.imagenPictureBox.Location = new System.Drawing.Point(22, 100);
+            this.imagenPictureBox.Name = "imagenPictureBox";
+            this.imagenPictureBox.Size = new System.Drawing.Size(249, 115);
+            this.imagenPictureBox.TabIndex = 29;
+            this.imagenPictureBox.TabStop = false;
+            // 
+            // cargarImagenBoton
+            // 
+            this.cargarImagenBoton.Location = new System.Drawing.Point(75, 59);
+            this.cargarImagenBoton.Name = "cargarImagenBoton";
+            this.cargarImagenBoton.Size = new System.Drawing.Size(140, 23);
+            this.cargarImagenBoton.TabIndex = 4;
+            this.cargarImagenBoton.Text = "Seleccionar Imagen ";
+            this.cargarImagenBoton.UseVisualStyleBackColor = true;
+            this.cargarImagenBoton.Click += new System.EventHandler(this.cargarImagenBoton_Click);
             // 
             // ObligatorioDescripcionLabel
             // 
@@ -156,6 +181,15 @@ namespace ISW
             this.ObligatorioDescripcionLabel.Size = new System.Drawing.Size(147, 21);
             this.ObligatorioDescripcionLabel.TabIndex = 28;
             this.ObligatorioDescripcionLabel.Text = "*Campo obligatorio";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "label1";
             // 
             // CiudadForm
             // 
@@ -177,6 +211,7 @@ namespace ISW
             this.CiudadGrb.PerformLayout();
             this.ProductoGrb.ResumeLayout(false);
             this.ProductoGrb.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,6 +230,9 @@ namespace ISW
         private System.Windows.Forms.Button ContinuarCiudadButtton;
         private System.Windows.Forms.Label ObligatorioDescripcionLabel;
         private System.Windows.Forms.Label ObligatorioCiudadLabel;
+        private System.Windows.Forms.PictureBox imagenPictureBox;
+        private System.Windows.Forms.Button cargarImagenBoton;
+        private System.Windows.Forms.Label label1;
     }
 }
 
