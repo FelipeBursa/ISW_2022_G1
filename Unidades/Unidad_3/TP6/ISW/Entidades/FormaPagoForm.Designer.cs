@@ -39,14 +39,14 @@ namespace ISW.Entidades
             this.MontoPagaClienteTextBox = new System.Windows.Forms.TextBox();
             this.MontoPagaClienteLabel = new System.Windows.Forms.Label();
             this.TarjetaVisaGroupBox = new System.Windows.Forms.GroupBox();
-            this.NombreTitutarTarjetaLabel = new System.Windows.Forms.Label();
-            this.NombreTitularTarjetaTextBox = new System.Windows.Forms.TextBox();
-            this.NumeroTarjetaLabel = new System.Windows.Forms.Label();
-            this.FechaVencimientoLabel = new System.Windows.Forms.Label();
-            this.NumeroTarjetaTextBox = new System.Windows.Forms.TextBox();
-            this.CodigoSeguridadLabel = new System.Windows.Forms.Label();
-            this.FechaVencimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CodigoSeguridadTextBox = new System.Windows.Forms.TextBox();
+            this.FechaVencimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.CodigoSeguridadLabel = new System.Windows.Forms.Label();
+            this.NumeroTarjetaTextBox = new System.Windows.Forms.TextBox();
+            this.FechaVencimientoLabel = new System.Windows.Forms.Label();
+            this.NumeroTarjetaLabel = new System.Windows.Forms.Label();
+            this.NombreTitularTarjetaTextBox = new System.Windows.Forms.TextBox();
+            this.NombreTitutarTarjetaLabel = new System.Windows.Forms.Label();
             this.FechaRecibidaLabel = new System.Windows.Forms.Label();
             this.FechaRecibidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.EfectivoGroupBox.SuspendLayout();
@@ -156,51 +156,21 @@ namespace ISW.Entidades
             this.TarjetaVisaGroupBox.TabIndex = 34;
             this.TarjetaVisaGroupBox.TabStop = false;
             // 
-            // NombreTitutarTarjetaLabel
+            // CodigoSeguridadTextBox
             // 
-            this.NombreTitutarTarjetaLabel.AutoSize = true;
-            this.NombreTitutarTarjetaLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreTitutarTarjetaLabel.Location = new System.Drawing.Point(7, 33);
-            this.NombreTitutarTarjetaLabel.Name = "NombreTitutarTarjetaLabel";
-            this.NombreTitutarTarjetaLabel.Size = new System.Drawing.Size(265, 25);
-            this.NombreTitutarTarjetaLabel.TabIndex = 0;
-            this.NombreTitutarTarjetaLabel.Text = "Nombre y Apellido del titular: ";
+            this.CodigoSeguridadTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodigoSeguridadTextBox.Location = new System.Drawing.Point(206, 150);
+            this.CodigoSeguridadTextBox.Name = "CodigoSeguridadTextBox";
+            this.CodigoSeguridadTextBox.Size = new System.Drawing.Size(271, 29);
+            this.CodigoSeguridadTextBox.TabIndex = 9;
             // 
-            // NombreTitularTarjetaTextBox
+            // FechaVencimientoDateTimePicker
             // 
-            this.NombreTitularTarjetaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreTitularTarjetaTextBox.Location = new System.Drawing.Point(273, 33);
-            this.NombreTitularTarjetaTextBox.Name = "NombreTitularTarjetaTextBox";
-            this.NombreTitularTarjetaTextBox.Size = new System.Drawing.Size(206, 29);
-            this.NombreTitularTarjetaTextBox.TabIndex = 1;
-            // 
-            // NumeroTarjetaLabel
-            // 
-            this.NumeroTarjetaLabel.AutoSize = true;
-            this.NumeroTarjetaLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroTarjetaLabel.Location = new System.Drawing.Point(10, 72);
-            this.NumeroTarjetaLabel.Name = "NumeroTarjetaLabel";
-            this.NumeroTarjetaLabel.Size = new System.Drawing.Size(190, 25);
-            this.NumeroTarjetaLabel.TabIndex = 2;
-            this.NumeroTarjetaLabel.Text = "Número de la tarjeta:";
-            // 
-            // FechaVencimientoLabel
-            // 
-            this.FechaVencimientoLabel.AutoSize = true;
-            this.FechaVencimientoLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaVencimientoLabel.Location = new System.Drawing.Point(10, 115);
-            this.FechaVencimientoLabel.Name = "FechaVencimientoLabel";
-            this.FechaVencimientoLabel.Size = new System.Drawing.Size(195, 25);
-            this.FechaVencimientoLabel.TabIndex = 3;
-            this.FechaVencimientoLabel.Text = "Fecha de vencimiento";
-            // 
-            // NumeroTarjetaTextBox
-            // 
-            this.NumeroTarjetaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroTarjetaTextBox.Location = new System.Drawing.Point(206, 72);
-            this.NumeroTarjetaTextBox.Name = "NumeroTarjetaTextBox";
-            this.NumeroTarjetaTextBox.Size = new System.Drawing.Size(273, 29);
-            this.NumeroTarjetaTextBox.TabIndex = 4;
+            this.FechaVencimientoDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaVencimientoDateTimePicker.Location = new System.Drawing.Point(206, 115);
+            this.FechaVencimientoDateTimePicker.Name = "FechaVencimientoDateTimePicker";
+            this.FechaVencimientoDateTimePicker.Size = new System.Drawing.Size(273, 29);
+            this.FechaVencimientoDateTimePicker.TabIndex = 8;
             // 
             // CodigoSeguridadLabel
             // 
@@ -212,21 +182,51 @@ namespace ISW.Entidades
             this.CodigoSeguridadLabel.TabIndex = 7;
             this.CodigoSeguridadLabel.Text = "Código de seguridad:";
             // 
-            // FechaVencimientoDateTimePicker
+            // NumeroTarjetaTextBox
             // 
-            this.FechaVencimientoDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaVencimientoDateTimePicker.Location = new System.Drawing.Point(206, 115);
-            this.FechaVencimientoDateTimePicker.Name = "FechaVencimientoDateTimePicker";
-            this.FechaVencimientoDateTimePicker.Size = new System.Drawing.Size(273, 29);
-            this.FechaVencimientoDateTimePicker.TabIndex = 8;
+            this.NumeroTarjetaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumeroTarjetaTextBox.Location = new System.Drawing.Point(206, 72);
+            this.NumeroTarjetaTextBox.Name = "NumeroTarjetaTextBox";
+            this.NumeroTarjetaTextBox.Size = new System.Drawing.Size(273, 29);
+            this.NumeroTarjetaTextBox.TabIndex = 4;
             // 
-            // CodigoSeguridadTextBox
+            // FechaVencimientoLabel
             // 
-            this.CodigoSeguridadTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodigoSeguridadTextBox.Location = new System.Drawing.Point(206, 150);
-            this.CodigoSeguridadTextBox.Name = "CodigoSeguridadTextBox";
-            this.CodigoSeguridadTextBox.Size = new System.Drawing.Size(271, 29);
-            this.CodigoSeguridadTextBox.TabIndex = 9;
+            this.FechaVencimientoLabel.AutoSize = true;
+            this.FechaVencimientoLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaVencimientoLabel.Location = new System.Drawing.Point(10, 115);
+            this.FechaVencimientoLabel.Name = "FechaVencimientoLabel";
+            this.FechaVencimientoLabel.Size = new System.Drawing.Size(195, 25);
+            this.FechaVencimientoLabel.TabIndex = 3;
+            this.FechaVencimientoLabel.Text = "Fecha de vencimiento";
+            // 
+            // NumeroTarjetaLabel
+            // 
+            this.NumeroTarjetaLabel.AutoSize = true;
+            this.NumeroTarjetaLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumeroTarjetaLabel.Location = new System.Drawing.Point(10, 72);
+            this.NumeroTarjetaLabel.Name = "NumeroTarjetaLabel";
+            this.NumeroTarjetaLabel.Size = new System.Drawing.Size(190, 25);
+            this.NumeroTarjetaLabel.TabIndex = 2;
+            this.NumeroTarjetaLabel.Text = "Número de la tarjeta:";
+            // 
+            // NombreTitularTarjetaTextBox
+            // 
+            this.NombreTitularTarjetaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreTitularTarjetaTextBox.Location = new System.Drawing.Point(273, 33);
+            this.NombreTitularTarjetaTextBox.Name = "NombreTitularTarjetaTextBox";
+            this.NombreTitularTarjetaTextBox.Size = new System.Drawing.Size(206, 29);
+            this.NombreTitularTarjetaTextBox.TabIndex = 1;
+            // 
+            // NombreTitutarTarjetaLabel
+            // 
+            this.NombreTitutarTarjetaLabel.AutoSize = true;
+            this.NombreTitutarTarjetaLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreTitutarTarjetaLabel.Location = new System.Drawing.Point(7, 33);
+            this.NombreTitutarTarjetaLabel.Name = "NombreTitutarTarjetaLabel";
+            this.NombreTitutarTarjetaLabel.Size = new System.Drawing.Size(265, 25);
+            this.NombreTitutarTarjetaLabel.TabIndex = 0;
+            this.NombreTitutarTarjetaLabel.Text = "Nombre y Apellido del titular: ";
             // 
             // FechaRecibidaLabel
             // 
@@ -250,7 +250,7 @@ namespace ISW.Entidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.ClientSize = new System.Drawing.Size(543, 667);
             this.Controls.Add(this.FechaRecibidaDateTimePicker);
             this.Controls.Add(this.FechaRecibidaLabel);

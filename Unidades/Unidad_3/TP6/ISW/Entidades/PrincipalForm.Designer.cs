@@ -34,8 +34,8 @@ namespace ISW.Entidades
             this.hacerPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deLoQueSeaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comercioAdheridoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.descuentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descuentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguimientoDePedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenGroupBox = new System.Windows.Forms.GroupBox();
@@ -45,7 +45,7 @@ namespace ISW.Entidades
             // 
             // menuStrip2
             // 
-            this.menuStrip2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -68,14 +68,14 @@ namespace ISW.Entidades
             this.deLoQueSeaToolStripMenuItem,
             this.comercioAdheridoToolStripMenuItem});
             this.hacerPedidoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hacerPedidoToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.hacerPedidoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(41)))));
             this.hacerPedidoToolStripMenuItem.Name = "hacerPedidoToolStripMenuItem";
             this.hacerPedidoToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.hacerPedidoToolStripMenuItem.Text = " Realizar Pedido";
             // 
             // deLoQueSeaToolStripMenuItem
             // 
-            this.deLoQueSeaToolStripMenuItem.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.deLoQueSeaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.deLoQueSeaToolStripMenuItem.Name = "deLoQueSeaToolStripMenuItem";
             this.deLoQueSeaToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.deLoQueSeaToolStripMenuItem.Text = "De lo que sea";
@@ -83,28 +83,31 @@ namespace ISW.Entidades
             // 
             // comercioAdheridoToolStripMenuItem
             // 
-            this.comercioAdheridoToolStripMenuItem.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.comercioAdheridoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.comercioAdheridoToolStripMenuItem.Name = "comercioAdheridoToolStripMenuItem";
             this.comercioAdheridoToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.comercioAdheridoToolStripMenuItem.Text = "Comercio Adherido";
             // 
-            // descuentosToolStripMenuItem
-            // 
-            this.descuentosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descuentosToolStripMenuItem.Name = "descuentosToolStripMenuItem";
-            this.descuentosToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
-            this.descuentosToolStripMenuItem.Text = "Descuentos";
-            // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ayudaToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(41)))));
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.ayudaToolStripMenuItem.Text = "Registrar Comercio";
             // 
+            // descuentosToolStripMenuItem
+            // 
+            this.descuentosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descuentosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(41)))));
+            this.descuentosToolStripMenuItem.Name = "descuentosToolStripMenuItem";
+            this.descuentosToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.descuentosToolStripMenuItem.Text = "Descuentos";
+            // 
             // seguimientoDePedidoToolStripMenuItem
             // 
             this.seguimientoDePedidoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seguimientoDePedidoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(41)))));
             this.seguimientoDePedidoToolStripMenuItem.Name = "seguimientoDePedidoToolStripMenuItem";
             this.seguimientoDePedidoToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
             this.seguimientoDePedidoToolStripMenuItem.Text = "Seguimiento de Pedido";
@@ -112,6 +115,7 @@ namespace ISW.Entidades
             // ayudaToolStripMenuItem1
             // 
             this.ayudaToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ayudaToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(41)))));
             this.ayudaToolStripMenuItem1.Name = "ayudaToolStripMenuItem1";
             this.ayudaToolStripMenuItem1.Size = new System.Drawing.Size(218, 34);
             this.ayudaToolStripMenuItem1.Text = "Ayuda";
@@ -120,7 +124,7 @@ namespace ISW.Entidades
             // 
             this.ImagenGroupBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImagenGroupBox.BackgroundImage")));
             this.ImagenGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ImagenGroupBox.Location = new System.Drawing.Point(247, 12);
+            this.ImagenGroupBox.Location = new System.Drawing.Point(250, 12);
             this.ImagenGroupBox.Name = "ImagenGroupBox";
             this.ImagenGroupBox.Size = new System.Drawing.Size(371, 328);
             this.ImagenGroupBox.TabIndex = 3;
@@ -129,8 +133,10 @@ namespace ISW.Entidades
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 283);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(41)))));
+            this.label1.Location = new System.Drawing.Point(12, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 47);
             this.label1.TabIndex = 4;
@@ -140,9 +146,9 @@ namespace ISW.Entidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(51)))), ((int)(((byte)(41)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(630, 349);
+            this.ClientSize = new System.Drawing.Size(633, 349);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ImagenGroupBox);
             this.Controls.Add(this.menuStrip2);

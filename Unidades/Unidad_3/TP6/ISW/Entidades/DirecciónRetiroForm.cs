@@ -14,54 +14,58 @@ namespace ISW.Entidades
 {
     public partial class DirecciónRetiroForm : Form
     {
+        bool Validacion;
         public DirecciónRetiroForm()
         {
             InitializeComponent();
-            DirecciónRetiroGrb.Visible = false;
-           
+            DirecciónRetiroGroupBox.Enabled = false;
+            Validacion = false;                     
         }
-
-        
         
         //Hace visible la imagen y oculta el gruop box
         private void MapaInteractivoRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            DirecciónRetiroGrb.Visible = false;
-            ImagenDirecciónGroupBox.Visible = true;
+            CalleTextBox.Text = "";
+            NumCalleTextBox.Text = "";
+            ReferenciaTextBox.Text = "";
+            DirecciónRetiroGroupBox.Enabled = false;
+            MapaInteractivoButton.Enabled = true;
         }
 
         //Hace visible el group box y oculta la imagen
         private void LlenarCamposRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            DirecciónRetiroGrb.Visible = true;
-            ImagenDirecciónGroupBox.Visible = false;
+            DirecciónRetiroGroupBox.Enabled = true;
+            MapaInteractivoButton.Enabled = false;
             
         }
-
-        //valida que todos los campos obligatorios sean completados
+        
         private void ValidarCampos()
         {
-            
-                MessageBox.Show("Se deben completar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if(CalleTxt.Text.Equals(""))
+            if ((ReferenciaTextBox.Text.Length > 100) || (CalleTextBox.Text.Equals("")) || (NumCalleTextBox.Text.Equals("")))
+            {
+                MessageBox.Show("Por favor complete todos los campos y asegurese de que la referencia no supere los 100 caracteres", "Advertencia",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (CalleTextBox.Text.Equals(""))
                 {
-                    CalleTxt.Focus();
+                    CalleTextBox.Focus();
                 }
-                if (NumCalletxt.Text.Equals(""))
+                if (NumCalleTextBox.Text.Equals(""))
                 {
-                    NumCalletxt.Focus();
+                    NumCalleTextBox.Focus();
                 }
-            
+            }
+            else
+            {              
+                Validacion = true;
+            }
         }
-
 
         private void ContinuarDirecciónButton_Click(object sender, EventArgs e)
         {
-            if ((LlenarCamposRadioButton.Checked) & (CalleTxt.Text.Equals("") || (NumCalletxt.Text.Equals(""))))
-            {
-                ValidarCampos();
-            }
-            else
+            ValidarCampos();
+
+            if (Validacion == true)
             {
                 DirecciónDestinoForm ventana = new DirecciónDestinoForm();
                 ventana.Show();
@@ -69,12 +73,35 @@ namespace ISW.Entidades
             }
         }
 
+
         private void VolverDirecciónRetiroButton_Click(object sender, EventArgs e)
         {
             CiudadForm ventana = new CiudadForm();
             ventana.Show();
             this.Hide();
         }
+
+        private void MapaButton_Click(object sender, EventArgs e)
+        {
+            CalleTextBox.Text = "Macaon";
+            NumCalleTextBox.Text = "4124";
+            ReferenciaTextBox.Text = "Casa Blanca con ventanas grandes";
+        }
+
+        private void NumCalleTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Char.IsNumber(e.KeyChar)) || (Char.IsControl(e.KeyChar)))
+            {
+                e.Handled = false;              
+            }
+            else
+            {
+                MessageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
+                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+        }
+
     }
 
     

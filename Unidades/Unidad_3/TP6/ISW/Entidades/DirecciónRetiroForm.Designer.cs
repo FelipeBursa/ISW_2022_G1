@@ -30,43 +30,63 @@ namespace ISW.Entidades
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirecciónRetiroForm));
-            this.DirecciónRetiroGrb = new System.Windows.Forms.GroupBox();
+            this.DirecciónRetiroGroupBox = new System.Windows.Forms.GroupBox();
+            this.ObligatorioNumRetiroLabel = new System.Windows.Forms.Label();
+            this.ObligatorioCalleRetiroLabel = new System.Windows.Forms.Label();
             this.CalleLbl = new System.Windows.Forms.Label();
             this.DirecDestinolbl = new System.Windows.Forms.Label();
-            this.NumCalletxt = new System.Windows.Forms.TextBox();
-            this.CalleTxt = new System.Windows.Forms.TextBox();
-            this.ReferenciaTxt = new System.Windows.Forms.TextBox();
+            this.NumCalleTextBox = new System.Windows.Forms.TextBox();
+            this.CalleTextBox = new System.Windows.Forms.TextBox();
+            this.ReferenciaTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.NumCalleLbl = new System.Windows.Forms.Label();
             this.ReferenciaLbl = new System.Windows.Forms.Label();
             this.OpcionDireccionLabel = new System.Windows.Forms.Label();
             this.MapaInteractivoRadioButton = new System.Windows.Forms.RadioButton();
             this.LlenarCamposRadioButton = new System.Windows.Forms.RadioButton();
-            this.ImagenDirecciónGroupBox = new System.Windows.Forms.GroupBox();
             this.ContinuarDirecciónRetiroButton = new System.Windows.Forms.Button();
-            this.ObligatorioCalleRetiroLabel = new System.Windows.Forms.Label();
-            this.ObligatorioNumRetiroLabel = new System.Windows.Forms.Label();
             this.VolverDirecciónRetiroButton = new System.Windows.Forms.Button();
-            this.DirecciónRetiroGrb.SuspendLayout();
+            this.MapaInteractivoButton = new System.Windows.Forms.Button();
+            this.DirecciónRetiroGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DirecciónRetiroGrb
+            // DirecciónRetiroGroupBox
             // 
-            this.DirecciónRetiroGrb.Controls.Add(this.ObligatorioNumRetiroLabel);
-            this.DirecciónRetiroGrb.Controls.Add(this.ObligatorioCalleRetiroLabel);
-            this.DirecciónRetiroGrb.Controls.Add(this.CalleLbl);
-            this.DirecciónRetiroGrb.Controls.Add(this.DirecDestinolbl);
-            this.DirecciónRetiroGrb.Controls.Add(this.NumCalletxt);
-            this.DirecciónRetiroGrb.Controls.Add(this.CalleTxt);
-            this.DirecciónRetiroGrb.Controls.Add(this.ReferenciaTxt);
-            this.DirecciónRetiroGrb.Controls.Add(this.label4);
-            this.DirecciónRetiroGrb.Controls.Add(this.NumCalleLbl);
-            this.DirecciónRetiroGrb.Controls.Add(this.ReferenciaLbl);
-            this.DirecciónRetiroGrb.Location = new System.Drawing.Point(18, 137);
-            this.DirecciónRetiroGrb.Name = "DirecciónRetiroGrb";
-            this.DirecciónRetiroGrb.Size = new System.Drawing.Size(416, 293);
-            this.DirecciónRetiroGrb.TabIndex = 24;
-            this.DirecciónRetiroGrb.TabStop = false;
+            this.DirecciónRetiroGroupBox.Controls.Add(this.ObligatorioNumRetiroLabel);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.ObligatorioCalleRetiroLabel);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.CalleLbl);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.DirecDestinolbl);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.NumCalleTextBox);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.CalleTextBox);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.ReferenciaTextBox);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.label4);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.NumCalleLbl);
+            this.DirecciónRetiroGroupBox.Controls.Add(this.ReferenciaLbl);
+            this.DirecciónRetiroGroupBox.Location = new System.Drawing.Point(18, 137);
+            this.DirecciónRetiroGroupBox.Name = "DirecciónRetiroGroupBox";
+            this.DirecciónRetiroGroupBox.Size = new System.Drawing.Size(419, 317);
+            this.DirecciónRetiroGroupBox.TabIndex = 24;
+            this.DirecciónRetiroGroupBox.TabStop = false;
+            // 
+            // ObligatorioNumRetiroLabel
+            // 
+            this.ObligatorioNumRetiroLabel.AutoSize = true;
+            this.ObligatorioNumRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioNumRetiroLabel.Location = new System.Drawing.Point(6, 197);
+            this.ObligatorioNumRetiroLabel.Name = "ObligatorioNumRetiroLabel";
+            this.ObligatorioNumRetiroLabel.Size = new System.Drawing.Size(147, 21);
+            this.ObligatorioNumRetiroLabel.TabIndex = 24;
+            this.ObligatorioNumRetiroLabel.Text = "*Campo obligatorio";
+            // 
+            // ObligatorioCalleRetiroLabel
+            // 
+            this.ObligatorioCalleRetiroLabel.AutoSize = true;
+            this.ObligatorioCalleRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioCalleRetiroLabel.Location = new System.Drawing.Point(7, 126);
+            this.ObligatorioCalleRetiroLabel.Name = "ObligatorioCalleRetiroLabel";
+            this.ObligatorioCalleRetiroLabel.Size = new System.Drawing.Size(147, 21);
+            this.ObligatorioCalleRetiroLabel.TabIndex = 23;
+            this.ObligatorioCalleRetiroLabel.Text = "*Campo obligatorio";
             // 
             // CalleLbl
             // 
@@ -88,29 +108,31 @@ namespace ISW.Entidades
             this.DirecDestinolbl.TabIndex = 16;
             this.DirecDestinolbl.Text = "Ingrese dirección de retiro";
             // 
-            // NumCalletxt
+            // NumCalleTextBox
             // 
-            this.NumCalletxt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumCalletxt.Location = new System.Drawing.Point(101, 159);
-            this.NumCalletxt.Name = "NumCalletxt";
-            this.NumCalletxt.Size = new System.Drawing.Size(200, 35);
-            this.NumCalletxt.TabIndex = 7;
+            this.NumCalleTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumCalleTextBox.Location = new System.Drawing.Point(101, 159);
+            this.NumCalleTextBox.Name = "NumCalleTextBox";
+            this.NumCalleTextBox.Size = new System.Drawing.Size(200, 35);
+            this.NumCalleTextBox.TabIndex = 7;
+            this.NumCalleTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumCalleTextBox_KeyPress);
             // 
-            // CalleTxt
+            // CalleTextBox
             // 
-            this.CalleTxt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalleTxt.Location = new System.Drawing.Point(74, 88);
-            this.CalleTxt.Name = "CalleTxt";
-            this.CalleTxt.Size = new System.Drawing.Size(227, 35);
-            this.CalleTxt.TabIndex = 6;
+            this.CalleTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalleTextBox.Location = new System.Drawing.Point(74, 88);
+            this.CalleTextBox.Name = "CalleTextBox";
+            this.CalleTextBox.Size = new System.Drawing.Size(227, 35);
+            this.CalleTextBox.TabIndex = 6;
             // 
-            // ReferenciaTxt
+            // ReferenciaTextBox
             // 
-            this.ReferenciaTxt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReferenciaTxt.Location = new System.Drawing.Point(121, 236);
-            this.ReferenciaTxt.Name = "ReferenciaTxt";
-            this.ReferenciaTxt.Size = new System.Drawing.Size(180, 35);
-            this.ReferenciaTxt.TabIndex = 8;
+            this.ReferenciaTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReferenciaTextBox.Location = new System.Drawing.Point(121, 236);
+            this.ReferenciaTextBox.Multiline = true;
+            this.ReferenciaTextBox.Name = "ReferenciaTextBox";
+            this.ReferenciaTextBox.Size = new System.Drawing.Size(289, 57);
+            this.ReferenciaTextBox.TabIndex = 8;
             // 
             // label4
             // 
@@ -177,16 +199,6 @@ namespace ISW.Entidades
             this.LlenarCamposRadioButton.UseVisualStyleBackColor = true;
             this.LlenarCamposRadioButton.CheckedChanged += new System.EventHandler(this.LlenarCamposRadioButton_CheckedChanged);
             // 
-            // ImagenDirecciónGroupBox
-            // 
-            this.ImagenDirecciónGroupBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImagenDirecciónGroupBox.BackgroundImage")));
-            this.ImagenDirecciónGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ImagenDirecciónGroupBox.Location = new System.Drawing.Point(495, 27);
-            this.ImagenDirecciónGroupBox.Name = "ImagenDirecciónGroupBox";
-            this.ImagenDirecciónGroupBox.Size = new System.Drawing.Size(386, 367);
-            this.ImagenDirecciónGroupBox.TabIndex = 28;
-            this.ImagenDirecciónGroupBox.TabStop = false;
-            // 
             // ContinuarDirecciónRetiroButton
             // 
             this.ContinuarDirecciónRetiroButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -199,26 +211,6 @@ namespace ISW.Entidades
             this.ContinuarDirecciónRetiroButton.Text = "Continuar";
             this.ContinuarDirecciónRetiroButton.UseVisualStyleBackColor = false;
             this.ContinuarDirecciónRetiroButton.Click += new System.EventHandler(this.ContinuarDirecciónButton_Click);
-            // 
-            // ObligatorioCalleRetiroLabel
-            // 
-            this.ObligatorioCalleRetiroLabel.AutoSize = true;
-            this.ObligatorioCalleRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObligatorioCalleRetiroLabel.Location = new System.Drawing.Point(7, 126);
-            this.ObligatorioCalleRetiroLabel.Name = "ObligatorioCalleRetiroLabel";
-            this.ObligatorioCalleRetiroLabel.Size = new System.Drawing.Size(147, 21);
-            this.ObligatorioCalleRetiroLabel.TabIndex = 23;
-            this.ObligatorioCalleRetiroLabel.Text = "*Campo obligatorio";
-            // 
-            // ObligatorioNumRetiroLabel
-            // 
-            this.ObligatorioNumRetiroLabel.AutoSize = true;
-            this.ObligatorioNumRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObligatorioNumRetiroLabel.Location = new System.Drawing.Point(6, 197);
-            this.ObligatorioNumRetiroLabel.Name = "ObligatorioNumRetiroLabel";
-            this.ObligatorioNumRetiroLabel.Size = new System.Drawing.Size(147, 21);
-            this.ObligatorioNumRetiroLabel.TabIndex = 24;
-            this.ObligatorioNumRetiroLabel.Text = "*Campo obligatorio";
             // 
             // VolverDirecciónRetiroButton
             // 
@@ -233,23 +225,34 @@ namespace ISW.Entidades
             this.VolverDirecciónRetiroButton.UseVisualStyleBackColor = false;
             this.VolverDirecciónRetiroButton.Click += new System.EventHandler(this.VolverDirecciónRetiroButton_Click);
             // 
+            // MapaInteractivoButton
+            // 
+            this.MapaInteractivoButton.Image = ((System.Drawing.Image)(resources.GetObject("MapaInteractivoButton.Image")));
+            this.MapaInteractivoButton.Location = new System.Drawing.Point(482, 27);
+            this.MapaInteractivoButton.Margin = new System.Windows.Forms.Padding(0);
+            this.MapaInteractivoButton.Name = "MapaInteractivoButton";
+            this.MapaInteractivoButton.Size = new System.Drawing.Size(390, 363);
+            this.MapaInteractivoButton.TabIndex = 31;
+            this.MapaInteractivoButton.UseVisualStyleBackColor = true;
+            this.MapaInteractivoButton.Click += new System.EventHandler(this.MapaButton_Click);
+            // 
             // DirecciónRetiroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.ClientSize = new System.Drawing.Size(908, 491);
+            this.Controls.Add(this.MapaInteractivoButton);
             this.Controls.Add(this.VolverDirecciónRetiroButton);
             this.Controls.Add(this.ContinuarDirecciónRetiroButton);
-            this.Controls.Add(this.ImagenDirecciónGroupBox);
             this.Controls.Add(this.LlenarCamposRadioButton);
             this.Controls.Add(this.MapaInteractivoRadioButton);
             this.Controls.Add(this.OpcionDireccionLabel);
-            this.Controls.Add(this.DirecciónRetiroGrb);
+            this.Controls.Add(this.DirecciónRetiroGroupBox);
             this.Name = "DirecciónRetiroForm";
             this.Text = "Dirección de retiro del producto";
-            this.DirecciónRetiroGrb.ResumeLayout(false);
-            this.DirecciónRetiroGrb.PerformLayout();
+            this.DirecciónRetiroGroupBox.ResumeLayout(false);
+            this.DirecciónRetiroGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,22 +260,22 @@ namespace ISW.Entidades
 
         #endregion
 
-        private System.Windows.Forms.GroupBox DirecciónRetiroGrb;
+        private System.Windows.Forms.GroupBox DirecciónRetiroGroupBox;
         private System.Windows.Forms.Label CalleLbl;
         private System.Windows.Forms.Label DirecDestinolbl;
-        private System.Windows.Forms.TextBox NumCalletxt;
-        private System.Windows.Forms.TextBox CalleTxt;
-        private System.Windows.Forms.TextBox ReferenciaTxt;
+        private System.Windows.Forms.TextBox NumCalleTextBox;
+        private System.Windows.Forms.TextBox CalleTextBox;
+        private System.Windows.Forms.TextBox ReferenciaTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label NumCalleLbl;
         private System.Windows.Forms.Label ReferenciaLbl;
         private System.Windows.Forms.Label OpcionDireccionLabel;
         private System.Windows.Forms.RadioButton MapaInteractivoRadioButton;
         private System.Windows.Forms.RadioButton LlenarCamposRadioButton;
-        private System.Windows.Forms.GroupBox ImagenDirecciónGroupBox;
         private System.Windows.Forms.Button ContinuarDirecciónRetiroButton;
         private System.Windows.Forms.Label ObligatorioNumRetiroLabel;
         private System.Windows.Forms.Label ObligatorioCalleRetiroLabel;
         private System.Windows.Forms.Button VolverDirecciónRetiroButton;
+        private System.Windows.Forms.Button MapaInteractivoButton;
     }
 }

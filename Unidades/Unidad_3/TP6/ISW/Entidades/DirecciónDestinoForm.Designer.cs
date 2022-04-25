@@ -30,6 +30,8 @@ namespace ISW.Entidades
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ObligatorioDestinoNumeroLabel = new System.Windows.Forms.Label();
+            this.ObligatorioCalleDestinoLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ReferenciaDestinoLabel = new System.Windows.Forms.Label();
             this.NumeroDestinoTextBox = new System.Windows.Forms.TextBox();
@@ -37,8 +39,6 @@ namespace ISW.Entidades
             this.CalleDestinoTextBox = new System.Windows.Forms.TextBox();
             this.CalleDestinoLabel = new System.Windows.Forms.Label();
             this.ReferenciaDestinoTextBox = new System.Windows.Forms.TextBox();
-            this.ObligatorioCalleDestinoLabel = new System.Windows.Forms.Label();
-            this.ObligatorioDestinoNumeroLabel = new System.Windows.Forms.Label();
             this.ContinuarDirecciónDestinoButton = new System.Windows.Forms.Button();
             this.VolverDireccionDestinoButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -57,9 +57,29 @@ namespace ISW.Entidades
             this.groupBox1.Controls.Add(this.ReferenciaDestinoTextBox);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(434, 305);
+            this.groupBox1.Size = new System.Drawing.Size(437, 313);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
+            // 
+            // ObligatorioDestinoNumeroLabel
+            // 
+            this.ObligatorioDestinoNumeroLabel.AutoSize = true;
+            this.ObligatorioDestinoNumeroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioDestinoNumeroLabel.Location = new System.Drawing.Point(48, 192);
+            this.ObligatorioDestinoNumeroLabel.Name = "ObligatorioDestinoNumeroLabel";
+            this.ObligatorioDestinoNumeroLabel.Size = new System.Drawing.Size(147, 21);
+            this.ObligatorioDestinoNumeroLabel.TabIndex = 25;
+            this.ObligatorioDestinoNumeroLabel.Text = "*Campo obligatorio";
+            // 
+            // ObligatorioCalleDestinoLabel
+            // 
+            this.ObligatorioCalleDestinoLabel.AutoSize = true;
+            this.ObligatorioCalleDestinoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioCalleDestinoLabel.Location = new System.Drawing.Point(48, 117);
+            this.ObligatorioCalleDestinoLabel.Name = "ObligatorioCalleDestinoLabel";
+            this.ObligatorioCalleDestinoLabel.Size = new System.Drawing.Size(147, 21);
+            this.ObligatorioCalleDestinoLabel.TabIndex = 24;
+            this.ObligatorioCalleDestinoLabel.Text = "*Campo obligatorio";
             // 
             // label1
             // 
@@ -88,6 +108,7 @@ namespace ISW.Entidades
             this.NumeroDestinoTextBox.Name = "NumeroDestinoTextBox";
             this.NumeroDestinoTextBox.Size = new System.Drawing.Size(212, 26);
             this.NumeroDestinoTextBox.TabIndex = 17;
+            this.NumeroDestinoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumeroDestinoTextBox_KeyPress);
             // 
             // NumeroDestinoLabel
             // 
@@ -120,37 +141,18 @@ namespace ISW.Entidades
             // ReferenciaDestinoTextBox
             // 
             this.ReferenciaDestinoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReferenciaDestinoTextBox.Location = new System.Drawing.Point(147, 231);
+            this.ReferenciaDestinoTextBox.Location = new System.Drawing.Point(155, 233);
+            this.ReferenciaDestinoTextBox.Multiline = true;
             this.ReferenciaDestinoTextBox.Name = "ReferenciaDestinoTextBox";
-            this.ReferenciaDestinoTextBox.Size = new System.Drawing.Size(189, 26);
+            this.ReferenciaDestinoTextBox.Size = new System.Drawing.Size(253, 67);
             this.ReferenciaDestinoTextBox.TabIndex = 18;
-            // 
-            // ObligatorioCalleDestinoLabel
-            // 
-            this.ObligatorioCalleDestinoLabel.AutoSize = true;
-            this.ObligatorioCalleDestinoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObligatorioCalleDestinoLabel.Location = new System.Drawing.Point(48, 117);
-            this.ObligatorioCalleDestinoLabel.Name = "ObligatorioCalleDestinoLabel";
-            this.ObligatorioCalleDestinoLabel.Size = new System.Drawing.Size(147, 21);
-            this.ObligatorioCalleDestinoLabel.TabIndex = 24;
-            this.ObligatorioCalleDestinoLabel.Text = "*Campo obligatorio";
-            // 
-            // ObligatorioDestinoNumeroLabel
-            // 
-            this.ObligatorioDestinoNumeroLabel.AutoSize = true;
-            this.ObligatorioDestinoNumeroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObligatorioDestinoNumeroLabel.Location = new System.Drawing.Point(48, 192);
-            this.ObligatorioDestinoNumeroLabel.Name = "ObligatorioDestinoNumeroLabel";
-            this.ObligatorioDestinoNumeroLabel.Size = new System.Drawing.Size(147, 21);
-            this.ObligatorioDestinoNumeroLabel.TabIndex = 25;
-            this.ObligatorioDestinoNumeroLabel.Text = "*Campo obligatorio";
             // 
             // ContinuarDirecciónDestinoButton
             // 
             this.ContinuarDirecciónDestinoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ContinuarDirecciónDestinoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContinuarDirecciónDestinoButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ContinuarDirecciónDestinoButton.Location = new System.Drawing.Point(241, 322);
+            this.ContinuarDirecciónDestinoButton.Location = new System.Drawing.Point(241, 340);
             this.ContinuarDirecciónDestinoButton.Name = "ContinuarDirecciónDestinoButton";
             this.ContinuarDirecciónDestinoButton.Size = new System.Drawing.Size(192, 49);
             this.ContinuarDirecciónDestinoButton.TabIndex = 30;
@@ -163,7 +165,7 @@ namespace ISW.Entidades
             this.VolverDireccionDestinoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.VolverDireccionDestinoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VolverDireccionDestinoButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.VolverDireccionDestinoButton.Location = new System.Drawing.Point(26, 322);
+            this.VolverDireccionDestinoButton.Location = new System.Drawing.Point(26, 340);
             this.VolverDireccionDestinoButton.Name = "VolverDireccionDestinoButton";
             this.VolverDireccionDestinoButton.Size = new System.Drawing.Size(197, 49);
             this.VolverDireccionDestinoButton.TabIndex = 31;
@@ -175,8 +177,8 @@ namespace ISW.Entidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(468, 383);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
+            this.ClientSize = new System.Drawing.Size(483, 401);
             this.Controls.Add(this.VolverDireccionDestinoButton);
             this.Controls.Add(this.ContinuarDirecciónDestinoButton);
             this.Controls.Add(this.groupBox1);

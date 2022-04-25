@@ -13,63 +13,73 @@ namespace ISW
 {
     public partial class CiudadForm : Form
     {
-     
+        private bool ValidacionCiudad;
+        private bool ValidacionDescripcion;
+
         public CiudadForm()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();                        
         }
 
         private void CargarDatos()
         //carga ciudades al combo 
         {
-
-            CiudadesCmb.Items.Add(("Seleccione una ciudad..."));
-            CiudadesCmb.Items.Add(("Cordoba"));
-            CiudadesCmb.Items.Add(("Villa Carlos Paz"));
-            CiudadesCmb.Items.Add(("Villa Allende"));
-            CiudadesCmb.SelectedIndex = 0;
-          
+            CiudadesComboBox.Items.Add(("Seleccione una ciudad..."));
+            CiudadesComboBox.Items.Add(("Cordoba"));
+            CiudadesComboBox.Items.Add(("Villa Carlos Paz"));
+            CiudadesComboBox.Items.Add(("Villa Allende"));
+            CiudadesComboBox.SelectedIndex = 0;         
         }
 
         private void ValidarCiudadCombo()
         // se valida que se haya seleccionado una ciudad valida
         {
-            if ((CiudadesCmb.SelectedIndex == -1) || (CiudadesCmb.SelectedIndex == 0))
+            if ((CiudadesComboBox.SelectedIndex == -1) || (CiudadesComboBox.SelectedIndex == 0))
             {
                 MessageBox.Show("Se debe seleccionar una ciudad", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //No se cumple con la validación
+                ValidacionCiudad = false;
             }
             else
             {
-                //Continua hacia la siguiente ventana para seguir completando datos
-                DirecciónRetiroForm ventana = new DirecciónRetiroForm();
-                ventana.Show();
-                this.Hide();
+                //Se cumple con la validación
+                ValidacionCiudad = true;
             }
         }
 
         public void ValidarCampoDescripción()
         {
-            if (DescrProductoTxt.Text.Equals(""))
+            if (DescripcionProductoTextBox.Text.Equals("") || DescripcionProductoTextBox.Text.Length > 50)
             {
-                MessageBox.Show("Se debe ingresar una descripción", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La descripción es obligatoria y debe ser menor a 50 caracteres", "Advertencia",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //No se cumple con la validación
+                ValidacionDescripcion = false;
             }
-        }
-
-
+            else
+            {
+                //Se cumple con la validación
+                ValidacionDescripcion = true;
+            }          
+        }        
 
         private void InterfazPedidoDeLoQueSea_Load(object sender, EventArgs e)
         {
             CargarDatos();
         }
 
-
         private void ContinuarCiudadButtton_Click(object sender, EventArgs e)
         {
+            
             ValidarCampoDescripción();
             ValidarCiudadCombo();
-        }
 
+            if (ValidacionCiudad == true && ValidacionDescripcion == true)
+            {
+                DirecciónRetiroForm ventana = new DirecciónRetiroForm();
+                ventana.Show();
+                this.Hide();
+            }  
+        }
     }
 }

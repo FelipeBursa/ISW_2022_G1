@@ -30,16 +30,16 @@ namespace ISW
         private void InitializeComponent()
         {
             this.DeliveryEatLbl = new System.Windows.Forms.Label();
-            this.DescrProductoTxt = new System.Windows.Forms.TextBox();
+            this.DescripcionProductoTextBox = new System.Windows.Forms.TextBox();
             this.DescrProductoLbl = new System.Windows.Forms.Label();
-            this.FotoLbl = new System.Windows.Forms.Label();
-            this.CiudadesCmb = new System.Windows.Forms.ComboBox();
+            this.FotoLabel = new System.Windows.Forms.Label();
+            this.CiudadesComboBox = new System.Windows.Forms.ComboBox();
             this.SeleccionarCiudadLbl = new System.Windows.Forms.Label();
             this.CiudadGrb = new System.Windows.Forms.GroupBox();
+            this.ObligatorioCiudadLabel = new System.Windows.Forms.Label();
             this.ContinuarCiudadButtton = new System.Windows.Forms.Button();
             this.ProductoGrb = new System.Windows.Forms.GroupBox();
             this.ObligatorioDescripcionLabel = new System.Windows.Forms.Label();
-            this.ObligatorioCiudadLabel = new System.Windows.Forms.Label();
             this.CiudadGrb.SuspendLayout();
             this.ProductoGrb.SuspendLayout();
             this.SuspendLayout();
@@ -54,49 +54,51 @@ namespace ISW
             this.DeliveryEatLbl.TabIndex = 0;
             this.DeliveryEatLbl.Text = "DeliverEat!";
             // 
-            // DescrProductoTxt
+            // DescripcionProductoTextBox
             // 
-            this.DescrProductoTxt.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescrProductoTxt.Location = new System.Drawing.Point(24, 161);
-            this.DescrProductoTxt.MaximumSize = new System.Drawing.Size(300, 200);
-            this.DescrProductoTxt.Name = "DescrProductoTxt";
-            this.DescrProductoTxt.Size = new System.Drawing.Size(300, 33);
-            this.DescrProductoTxt.TabIndex = 1;
+            this.DescripcionProductoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DescripcionProductoTextBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescripcionProductoTextBox.Location = new System.Drawing.Point(27, 142);
+            this.DescripcionProductoTextBox.MaximumSize = new System.Drawing.Size(300, 200);
+            this.DescripcionProductoTextBox.Multiline = true;
+            this.DescripcionProductoTextBox.Name = "DescripcionProductoTextBox";
+            this.DescripcionProductoTextBox.Size = new System.Drawing.Size(300, 100);
+            this.DescripcionProductoTextBox.TabIndex = 1;
             // 
             // DescrProductoLbl
             // 
             this.DescrProductoLbl.AutoSize = true;
             this.DescrProductoLbl.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescrProductoLbl.Location = new System.Drawing.Point(20, 118);
+            this.DescrProductoLbl.Location = new System.Drawing.Point(20, 99);
             this.DescrProductoLbl.Name = "DescrProductoLbl";
             this.DescrProductoLbl.Size = new System.Drawing.Size(350, 40);
             this.DescrProductoLbl.TabIndex = 2;
             this.DescrProductoLbl.Text = "Describa el/los producto/s:";
             // 
-            // FotoLbl
+            // FotoLabel
             // 
-            this.FotoLbl.AutoSize = true;
-            this.FotoLbl.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FotoLbl.Location = new System.Drawing.Point(15, 16);
-            this.FotoLbl.Name = "FotoLbl";
-            this.FotoLbl.Size = new System.Drawing.Size(180, 40);
-            this.FotoLbl.TabIndex = 3;
-            this.FotoLbl.Text = "Agregar Foto";
+            this.FotoLabel.AutoSize = true;
+            this.FotoLabel.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FotoLabel.Location = new System.Drawing.Point(15, 16);
+            this.FotoLabel.Name = "FotoLabel";
+            this.FotoLabel.Size = new System.Drawing.Size(180, 40);
+            this.FotoLabel.TabIndex = 3;
+            this.FotoLabel.Text = "Agregar Foto";
             // 
-            // CiudadesCmb
+            // CiudadesComboBox
             // 
-            this.CiudadesCmb.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CiudadesCmb.FormattingEnabled = true;
-            this.CiudadesCmb.Location = new System.Drawing.Point(7, 70);
-            this.CiudadesCmb.Name = "CiudadesCmb";
-            this.CiudadesCmb.Size = new System.Drawing.Size(349, 33);
-            this.CiudadesCmb.TabIndex = 4;
+            this.CiudadesComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CiudadesComboBox.FormattingEnabled = true;
+            this.CiudadesComboBox.Location = new System.Drawing.Point(15, 77);
+            this.CiudadesComboBox.Name = "CiudadesComboBox";
+            this.CiudadesComboBox.Size = new System.Drawing.Size(349, 33);
+            this.CiudadesComboBox.TabIndex = 4;
             // 
             // SeleccionarCiudadLbl
             // 
             this.SeleccionarCiudadLbl.AutoSize = true;
             this.SeleccionarCiudadLbl.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SeleccionarCiudadLbl.Location = new System.Drawing.Point(16, 27);
+            this.SeleccionarCiudadLbl.Location = new System.Drawing.Point(22, 21);
             this.SeleccionarCiudadLbl.Name = "SeleccionarCiudadLbl";
             this.SeleccionarCiudadLbl.Size = new System.Drawing.Size(380, 40);
             this.SeleccionarCiudadLbl.TabIndex = 5;
@@ -104,20 +106,31 @@ namespace ISW
             // 
             // CiudadGrb
             // 
+            this.CiudadGrb.Controls.Add(this.ObligatorioCiudadLabel);
             this.CiudadGrb.Controls.Add(this.SeleccionarCiudadLbl);
-            this.CiudadGrb.Controls.Add(this.CiudadesCmb);
+            this.CiudadGrb.Controls.Add(this.CiudadesComboBox);
             this.CiudadGrb.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CiudadGrb.Location = new System.Drawing.Point(14, 243);
+            this.CiudadGrb.Location = new System.Drawing.Point(12, 276);
             this.CiudadGrb.Name = "CiudadGrb";
-            this.CiudadGrb.Size = new System.Drawing.Size(479, 125);
+            this.CiudadGrb.Size = new System.Drawing.Size(481, 149);
             this.CiudadGrb.TabIndex = 24;
             this.CiudadGrb.TabStop = false;
+            // 
+            // ObligatorioCiudadLabel
+            // 
+            this.ObligatorioCiudadLabel.AutoSize = true;
+            this.ObligatorioCiudadLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioCiudadLabel.Location = new System.Drawing.Point(11, 113);
+            this.ObligatorioCiudadLabel.Name = "ObligatorioCiudadLabel";
+            this.ObligatorioCiudadLabel.Size = new System.Drawing.Size(147, 21);
+            this.ObligatorioCiudadLabel.TabIndex = 29;
+            this.ObligatorioCiudadLabel.Text = "*Campo obligatorio";
             // 
             // ContinuarCiudadButtton
             // 
             this.ContinuarCiudadButtton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ContinuarCiudadButtton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContinuarCiudadButtton.Location = new System.Drawing.Point(536, 408);
+            this.ContinuarCiudadButtton.Location = new System.Drawing.Point(537, 401);
             this.ContinuarCiudadButtton.Name = "ContinuarCiudadButtton";
             this.ContinuarCiudadButtton.Size = new System.Drawing.Size(160, 51);
             this.ContinuarCiudadButtton.TabIndex = 6;
@@ -127,7 +140,7 @@ namespace ISW
             // 
             // ProductoGrb
             // 
-            this.ProductoGrb.Controls.Add(this.FotoLbl);
+            this.ProductoGrb.Controls.Add(this.FotoLabel);
             this.ProductoGrb.Location = new System.Drawing.Point(443, 99);
             this.ProductoGrb.Name = "ProductoGrb";
             this.ProductoGrb.Size = new System.Drawing.Size(270, 91);
@@ -138,32 +151,21 @@ namespace ISW
             // 
             this.ObligatorioDescripcionLabel.AutoSize = true;
             this.ObligatorioDescripcionLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObligatorioDescripcionLabel.Location = new System.Drawing.Point(23, 197);
+            this.ObligatorioDescripcionLabel.Location = new System.Drawing.Point(23, 252);
             this.ObligatorioDescripcionLabel.Name = "ObligatorioDescripcionLabel";
             this.ObligatorioDescripcionLabel.Size = new System.Drawing.Size(147, 21);
             this.ObligatorioDescripcionLabel.TabIndex = 28;
             this.ObligatorioDescripcionLabel.Text = "*Campo obligatorio";
             // 
-            // ObligatorioCiudadLabel
-            // 
-            this.ObligatorioCiudadLabel.AutoSize = true;
-            this.ObligatorioCiudadLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObligatorioCiudadLabel.Location = new System.Drawing.Point(23, 371);
-            this.ObligatorioCiudadLabel.Name = "ObligatorioCiudadLabel";
-            this.ObligatorioCiudadLabel.Size = new System.Drawing.Size(147, 21);
-            this.ObligatorioCiudadLabel.TabIndex = 29;
-            this.ObligatorioCiudadLabel.Text = "*Campo obligatorio";
-            // 
             // CiudadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.ClientSize = new System.Drawing.Size(753, 471);
-            this.Controls.Add(this.ObligatorioCiudadLabel);
-            this.Controls.Add(this.ObligatorioDescripcionLabel);
             this.Controls.Add(this.ContinuarCiudadButtton);
-            this.Controls.Add(this.DescrProductoTxt);
+            this.Controls.Add(this.DescripcionProductoTextBox);
+            this.Controls.Add(this.ObligatorioDescripcionLabel);
             this.Controls.Add(this.DescrProductoLbl);
             this.Controls.Add(this.ProductoGrb);
             this.Controls.Add(this.CiudadGrb);
@@ -183,10 +185,10 @@ namespace ISW
         #endregion
 
         private System.Windows.Forms.Label DeliveryEatLbl;
-        private System.Windows.Forms.TextBox DescrProductoTxt;
+        private System.Windows.Forms.TextBox DescripcionProductoTextBox;
         private System.Windows.Forms.Label DescrProductoLbl;
-        private System.Windows.Forms.Label FotoLbl;
-        private System.Windows.Forms.ComboBox CiudadesCmb;
+        private System.Windows.Forms.Label FotoLabel;
+        private System.Windows.Forms.ComboBox CiudadesComboBox;
         private System.Windows.Forms.Label SeleccionarCiudadLbl;
         private System.Windows.Forms.GroupBox CiudadGrb;
         private System.Windows.Forms.GroupBox ProductoGrb;

@@ -57,10 +57,9 @@ namespace ISW.Entidades
                        "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-            {
-                
-                MessageBox.Show("Su pedido ha sido realizado con éxito, el delivery llegará a la brevedad", "Pedido Finalizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+            {               
+                MessageBox.Show("Su pedido ha sido realizado con éxito, el delivery llegará a la brevedad",
+                    "Pedido Finalizado", MessageBoxButtons.OK, MessageBoxIcon.Information);                
             }
         }
 
