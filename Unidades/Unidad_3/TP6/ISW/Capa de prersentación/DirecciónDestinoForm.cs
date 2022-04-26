@@ -71,9 +71,34 @@ namespace ISW.Entidades
             }
             else
             {
-                MessageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
-                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ObligatorioDestinoNumeroLabel.Text = "Solo se pueden ingresar caracteres numéricos";
                 e.Handled = true;
+            }
+        }
+
+        private void NumeroDestinoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (NumeroDestinoTextBox.Text.Length == 0)
+            {
+                ObligatorioDestinoNumeroLabel.Text = "*Campo obligatorio ";
+                ObligatorioDestinoNumeroLabel.Visible = true;
+            }
+            else
+            {
+                ObligatorioDestinoNumeroLabel.Visible = false;
+            }
+        }
+
+        private void CalleDestinoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (CalleDestinoTextBox.Text.Length == 0)
+            {
+                ObligatorioCalleDestinoLabel.Text = "*Campo obligatorio ";
+                ObligatorioCalleDestinoLabel.Visible = true;
+            }
+            else
+            {
+                ObligatorioCalleDestinoLabel.Visible = false;
             }
         }
     }

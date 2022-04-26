@@ -115,11 +115,6 @@ namespace ISW
             }
         }
 
-        private void ImagenGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void CiudadesComboBox_TextChanged(object sender, EventArgs e)
         {
             if ((CiudadesComboBox.SelectedIndex == -1) || (CiudadesComboBox.SelectedIndex == 0))

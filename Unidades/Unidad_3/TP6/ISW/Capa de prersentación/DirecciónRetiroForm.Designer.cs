@@ -64,7 +64,7 @@ namespace ISW.Entidades
             this.DirecciónRetiroGroupBox.Controls.Add(this.ReferenciaLabel);
             this.DirecciónRetiroGroupBox.Location = new System.Drawing.Point(18, 137);
             this.DirecciónRetiroGroupBox.Name = "DirecciónRetiroGroupBox";
-            this.DirecciónRetiroGroupBox.Size = new System.Drawing.Size(419, 368);
+            this.DirecciónRetiroGroupBox.Size = new System.Drawing.Size(423, 368);
             this.DirecciónRetiroGroupBox.TabIndex = 24;
             this.DirecciónRetiroGroupBox.TabStop = false;
             // 
@@ -72,8 +72,8 @@ namespace ISW.Entidades
             // 
             this.ObligatorioNumeroRetiroLabel.AutoSize = true;
             this.ObligatorioNumeroRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObligatorioNumeroRetiroLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
-            this.ObligatorioNumeroRetiroLabel.Location = new System.Drawing.Point(6, 197);
+            this.ObligatorioNumeroRetiroLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.ObligatorioNumeroRetiroLabel.Location = new System.Drawing.Point(9, 179);
             this.ObligatorioNumeroRetiroLabel.Name = "ObligatorioNumeroRetiroLabel";
             this.ObligatorioNumeroRetiroLabel.Size = new System.Drawing.Size(147, 21);
             this.ObligatorioNumeroRetiroLabel.TabIndex = 24;
@@ -84,8 +84,8 @@ namespace ISW.Entidades
             this.ObligatorioCalleRetiroLabel.AutoSize = true;
             this.ObligatorioCalleRetiroLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.ObligatorioCalleRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObligatorioCalleRetiroLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
-            this.ObligatorioCalleRetiroLabel.Location = new System.Drawing.Point(7, 126);
+            this.ObligatorioCalleRetiroLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.ObligatorioCalleRetiroLabel.Location = new System.Drawing.Point(10, 108);
             this.ObligatorioCalleRetiroLabel.Name = "ObligatorioCalleRetiroLabel";
             this.ObligatorioCalleRetiroLabel.Size = new System.Drawing.Size(147, 21);
             this.ObligatorioCalleRetiroLabel.TabIndex = 23;
@@ -95,7 +95,7 @@ namespace ISW.Entidades
             // 
             this.CalleLabel.AutoSize = true;
             this.CalleLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalleLabel.Location = new System.Drawing.Point(10, 88);
+            this.CalleLabel.Location = new System.Drawing.Point(8, 70);
             this.CalleLabel.Name = "CalleLabel";
             this.CalleLabel.Size = new System.Drawing.Size(63, 30);
             this.CalleLabel.TabIndex = 22;
@@ -114,24 +114,26 @@ namespace ISW.Entidades
             // NumeroCalleTextBox
             // 
             this.NumeroCalleTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroCalleTextBox.Location = new System.Drawing.Point(101, 159);
+            this.NumeroCalleTextBox.Location = new System.Drawing.Point(104, 141);
             this.NumeroCalleTextBox.Name = "NumeroCalleTextBox";
             this.NumeroCalleTextBox.Size = new System.Drawing.Size(309, 35);
             this.NumeroCalleTextBox.TabIndex = 7;
+            this.NumeroCalleTextBox.TextChanged += new System.EventHandler(this.NumeroCalleTextBox_TextChanged);
             this.NumeroCalleTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumeroCalleTextBox_KeyPress);
             // 
             // CalleTextBox
             // 
             this.CalleTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalleTextBox.Location = new System.Drawing.Point(74, 88);
+            this.CalleTextBox.Location = new System.Drawing.Point(74, 70);
             this.CalleTextBox.Name = "CalleTextBox";
-            this.CalleTextBox.Size = new System.Drawing.Size(336, 35);
+            this.CalleTextBox.Size = new System.Drawing.Size(339, 35);
             this.CalleTextBox.TabIndex = 6;
+            this.CalleTextBox.TextChanged += new System.EventHandler(this.CalleTextBox_TextChanged);
             // 
             // ReferenciaTextBox
             // 
             this.ReferenciaTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReferenciaTextBox.Location = new System.Drawing.Point(121, 236);
+            this.ReferenciaTextBox.Location = new System.Drawing.Point(124, 218);
             this.ReferenciaTextBox.MaxLength = 100;
             this.ReferenciaTextBox.Multiline = true;
             this.ReferenciaTextBox.Name = "ReferenciaTextBox";
@@ -151,7 +153,7 @@ namespace ISW.Entidades
             // 
             this.NumeroCalleLabel.AutoSize = true;
             this.NumeroCalleLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroCalleLabel.Location = new System.Drawing.Point(6, 159);
+            this.NumeroCalleLabel.Location = new System.Drawing.Point(9, 141);
             this.NumeroCalleLabel.Name = "NumeroCalleLabel";
             this.NumeroCalleLabel.Size = new System.Drawing.Size(94, 30);
             this.NumeroCalleLabel.TabIndex = 10;
@@ -161,7 +163,7 @@ namespace ISW.Entidades
             // 
             this.ReferenciaLabel.AutoSize = true;
             this.ReferenciaLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReferenciaLabel.Location = new System.Drawing.Point(10, 236);
+            this.ReferenciaLabel.Location = new System.Drawing.Point(13, 218);
             this.ReferenciaLabel.Name = "ReferenciaLabel";
             this.ReferenciaLabel.Size = new System.Drawing.Size(115, 30);
             this.ReferenciaLabel.TabIndex = 11;

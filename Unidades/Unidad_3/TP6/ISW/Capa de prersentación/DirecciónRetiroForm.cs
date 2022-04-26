@@ -14,7 +14,9 @@ namespace ISW.Entidades
 {
     public partial class DirecciónRetiroForm : Form
     {
-        bool Validacion;
+        private bool Validacion;
+        private string CalleRandom;
+        private int NumeroCalleRandom;
 
         public DirecciónRetiroForm()
         {
@@ -84,8 +86,28 @@ namespace ISW.Entidades
 
         private void MapaButton_Click(object sender, EventArgs e)
         {
-            CalleTextBox.Text       = "Macaon";
-            NumeroCalleTextBox.Text = "4124";
+            GenerarUbicacion();
+        }
+
+        private void GenerarUbicacion ()
+        {
+            List<String> Calles = new List<String>();
+            Calles.Add("Macaon");
+            Calles.Add("9 de Julio");
+            Calles.Add("San Carlos");
+            Calles.Add("Javier Lopez");
+            Calles.Add("Elias Yofre");
+            Calles.Add("Rondeau");
+            Calles.Add("Chacabuco");
+            Calles.Add("Lima");
+            Calles.Add("Tucuman");
+
+            Random GeneradorRandom = new Random();
+            CalleTextBox.Text = Calles [GeneradorRandom.Next(0,8)];
+
+            Random GeneradorRandom2 = new Random();
+            NumeroCalleTextBox.Text = (GeneradorRandom2.Next(100, 8000)).ToString();
+
         }
 
         private void NumeroCalleTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -96,10 +118,36 @@ namespace ISW.Entidades
             }
             else
             {
-                MessageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
-                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ObligatorioNumeroRetiroLabel.Text = "Solo se pueden ingresar caracteres numéricos";
                 e.Handled = true;
             }
+        }
+
+        private void CalleTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (CalleTextBox.Text.Length == 0)
+            {
+                ObligatorioCalleRetiroLabel.Text = "*Campo obligatorio ";
+                ObligatorioCalleRetiroLabel.Visible = true;
+            }
+            else
+            {
+                ObligatorioCalleRetiroLabel.Visible = false;
+            }
+        }
+
+        private void NumeroCalleTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (NumeroCalleTextBox.Text.Length == 0)
+            {
+                ObligatorioNumeroRetiroLabel.Text = "*Campo obligatorio ";
+                ObligatorioNumeroRetiroLabel.Visible = true;
+            }
+            else
+            {
+                ObligatorioNumeroRetiroLabel.Visible = false;
+            }
+
         }
     }   
 }

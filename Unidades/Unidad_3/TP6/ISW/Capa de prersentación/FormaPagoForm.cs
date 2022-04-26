@@ -39,6 +39,23 @@ namespace ISW.Entidades
             FormaPagoComboBox.SelectedIndex = 0;
         }
 
+        private void FormaPagoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FechaRecibidaGroupBox.Visible = true;
+
+            if (FormaPagoComboBox.SelectedIndex == 1)
+            {
+                EfectivoGroupBox.Visible = true;
+                TarjetaVisaGroupBox.Visible = false;
+            }
+
+            if (FormaPagoComboBox.SelectedIndex == 2)
+            {
+                EfectivoGroupBox.Visible = false;
+                TarjetaVisaGroupBox.Visible = true;
+            }
+        }
+
         public void ValidarCampos()
         {
             if (FormaPagoComboBox.SelectedIndex == -1 || FormaPagoComboBox.SelectedIndex == 0)
@@ -94,23 +111,6 @@ namespace ISW.Entidades
                         }
                     }
                 }
-            }
-        }
-
-        private void FormaPagoComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FechaRecibidaGroupBox.Visible = true;
-
-            if (FormaPagoComboBox.SelectedIndex == 1)
-            {
-                EfectivoGroupBox.Visible    = true;
-                TarjetaVisaGroupBox.Visible = false;
-            }
-
-            if (FormaPagoComboBox.SelectedIndex == 2)
-            {
-                EfectivoGroupBox.Visible    = false;
-                TarjetaVisaGroupBox.Visible = true;
             }
         }
 
@@ -279,5 +279,7 @@ namespace ISW.Entidades
                 e.Handled = true;
             }
         }
+
+
     }
 }

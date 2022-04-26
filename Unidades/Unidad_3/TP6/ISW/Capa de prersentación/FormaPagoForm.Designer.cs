@@ -194,7 +194,7 @@ namespace ISW.Entidades
             this.TarjetaVisaGroupBox.Controls.Add(this.NumeroTarjetaLabel);
             this.TarjetaVisaGroupBox.Controls.Add(this.NombreTitularTarjetaTextBox);
             this.TarjetaVisaGroupBox.Controls.Add(this.NombreTitutarTarjetaLabel);
-            this.TarjetaVisaGroupBox.Location = new System.Drawing.Point(18, 136);
+            this.TarjetaVisaGroupBox.Location = new System.Drawing.Point(18, 133);
             this.TarjetaVisaGroupBox.Name = "TarjetaVisaGroupBox";
             this.TarjetaVisaGroupBox.Size = new System.Drawing.Size(593, 227);
             this.TarjetaVisaGroupBox.TabIndex = 34;
@@ -275,7 +275,7 @@ namespace ISW.Entidades
             // NumeroTarjetaTextBox
             // 
             this.NumeroTarjetaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroTarjetaTextBox.Location = new System.Drawing.Point(202, 71);
+            this.NumeroTarjetaTextBox.Location = new System.Drawing.Point(205, 73);
             this.NumeroTarjetaTextBox.MaxLength = 16;
             this.NumeroTarjetaTextBox.Name = "NumeroTarjetaTextBox";
             this.NumeroTarjetaTextBox.Size = new System.Drawing.Size(326, 29);
@@ -406,10 +406,10 @@ namespace ISW.Entidades
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(479, 55);
-            this.maskedTextBox1.Mask = "999999999,99$";
+            this.maskedTextBox1.Location = new System.Drawing.Point(486, 67);
+            this.maskedTextBox1.Mask = ",99$";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(80, 20);
+            this.maskedTextBox1.Size = new System.Drawing.Size(40, 20);
             this.maskedTextBox1.TabIndex = 47;
             // 
             // FormaPagoForm
