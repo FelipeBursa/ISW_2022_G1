@@ -127,7 +127,9 @@ namespace ISW.Entidades
             }
             else
             {
+
                 bool ResultadoHora = ValidarHora();
+                
                 if(ResultadoHora == false)
                 {
                     MessageBox.Show("Se debe ingresar una hora válida",
@@ -306,7 +308,7 @@ namespace ISW.Entidades
                 {
                     if (int.Parse(HoraMasketTextBox.Text[3].ToString()) <= 5)
                     {
-                        if (int.Parse(HoraMasketTextBox.Text[4].ToString()) <= 9)
+                        if (int.Parse(HoraMasketTextBox.Text[4].ToString()) <= 9 )
                         {
                             return true;
                         }

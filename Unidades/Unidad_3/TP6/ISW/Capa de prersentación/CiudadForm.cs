@@ -24,7 +24,6 @@ namespace ISW
             TamañoLabel.Visible = false;
             DescripcionGroupBox.Visible = false;
             ImagenGroupBox.Visible = false;
-            
         }
 
         private void CargarDatos()
@@ -38,7 +37,7 @@ namespace ISW
         }
 
         private void ValidarCiudadCombo()
-        // se valida que se haya seleccionado una ciudad valida
+        //se valida que se haya seleccionado una ciudad valida
         {
             if ((CiudadesComboBox.SelectedIndex == -1) || (CiudadesComboBox.SelectedIndex == 0))
             {
@@ -47,6 +46,7 @@ namespace ISW
                 //No se cumple con la validación
                 ValidacionCiudad = false;
             }
+
             else
             {
                 //Se cumple con la validación
@@ -58,13 +58,13 @@ namespace ISW
         {
             if (DescripcionProductoTextBox.Text.Equals(""))
             {
-
                 MessageBox.Show("La descripción es obligatoria y debe ser menor a 50 caracteres",
                     "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //No se cumple con la validación
                 ValidacionDescripcion = false;
                 DescripcionProductoTextBox.Focus();
             }
+
             else
             {
                 //Se cumple con la validación
@@ -106,6 +106,7 @@ namespace ISW
                     MessageBox.Show("La Imagen seleccionada supera el limite de tamaño de 5MB",
                         "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+
                 else
                 {
                     ImagenPictureBox.ImageLocation = abrirImagen.FileName;
@@ -122,6 +123,7 @@ namespace ISW
                 DescripcionGroupBox.Visible = false;
                 ImagenGroupBox.Visible = false;
             }
+
             else
             {
                 //Se cumple con la validación
@@ -137,11 +139,11 @@ namespace ISW
             {
                 ObligatorioDescripcionLabel.Visible = false;
             }
+
             else
             {
                 ObligatorioDescripcionLabel.Visible = true;
             }
-            
         }
     }
 }
