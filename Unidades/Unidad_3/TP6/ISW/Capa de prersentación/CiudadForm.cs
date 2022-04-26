@@ -22,15 +22,19 @@ namespace ISW
         {
             InitializeComponent();
             TamañoLabel.Visible = false;
+            DescripcionGroupBox.Visible = false;
+            ImagenGroupBox.Visible = false;
+            
         }
 
         private void CargarDatos()
         //carga ciudades al combo 
         {
+            CiudadesComboBox.Items.Add(("Seleccione una ciudad"));
             CiudadesComboBox.Items.Add(("Córdoba"));
             CiudadesComboBox.Items.Add(("Villa Carlos Paz"));
             CiudadesComboBox.Items.Add(("Villa Allende"));
-            CiudadesComboBox.SelectedIndex = 1;         
+            CiudadesComboBox.SelectedIndex = 0;         
         }
 
         private void ValidarCiudadCombo()
@@ -54,6 +58,7 @@ namespace ISW
         {
             if (DescripcionProductoTextBox.Text.Equals(""))
             {
+
                 MessageBox.Show("La descripción es obligatoria y debe ser menor a 50 caracteres",
                     "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //No se cumple con la validación
@@ -93,7 +98,7 @@ namespace ISW
             if (abrirImagen.ShowDialog() == DialogResult.OK)
             {
                 FileInfo info = new FileInfo(abrirImagen.FileName);
-                TamañoLabel.Text = "Tamaño imagen seleccionada: " +
+                TamañoLabel.Text = "Tamaño de imagen : " +
                     (info.Length * 0.000001).ToString() + " MB";
 
                 if (info.Length * 0.000001 > 5) //Validación para mostrar imagen
@@ -108,6 +113,40 @@ namespace ISW
                     TamañoLabel.Visible = true;
                 }
             }
+        }
+
+        private void ImagenGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CiudadesComboBox_TextChanged(object sender, EventArgs e)
+        {
+            if ((CiudadesComboBox.SelectedIndex == -1) || (CiudadesComboBox.SelectedIndex == 0))
+            {
+                DescripcionGroupBox.Visible = false;
+                ImagenGroupBox.Visible = false;
+            }
+            else
+            {
+                //Se cumple con la validación
+                ValidacionCiudad = true;
+                DescripcionGroupBox.Visible =true ;
+                ImagenGroupBox.Visible = true;
+            }
+        }
+
+        private void DescripcionProductoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if(DescripcionProductoTextBox.Text.Length > 0)
+            {
+                ObligatorioDescripcionLabel.Visible = false;
+            }
+            else
+            {
+                ObligatorioDescripcionLabel.Visible = true;
+            }
+            
         }
     }
 }

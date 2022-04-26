@@ -35,11 +35,13 @@ namespace ISW.Entidades
             this.FormaPagoComboBox = new System.Windows.Forms.ComboBox();
             this.ConfirmarPedidoButton = new System.Windows.Forms.Button();
             this.EfectivoGroupBox = new System.Windows.Forms.GroupBox();
+            this.signoPesosLabel = new System.Windows.Forms.Label();
             this.MontoValidacionLabel = new System.Windows.Forms.Label();
             this.TarjetaGroupBox = new System.Windows.Forms.GroupBox();
             this.MontoPagaClienteTextBox = new System.Windows.Forms.TextBox();
             this.MontoPagaClienteLabel = new System.Windows.Forms.Label();
             this.TarjetaVisaGroupBox = new System.Windows.Forms.GroupBox();
+            this.CodigoLabel = new System.Windows.Forms.Label();
             this.AdvertenciaTarjetaLabel = new System.Windows.Forms.Label();
             this.CodigoSeguridadTextBox = new System.Windows.Forms.TextBox();
             this.FechaVencimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -55,8 +57,6 @@ namespace ISW.Entidades
             this.FechaRecibidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.InmediatoRadioButton = new System.Windows.Forms.RadioButton();
             this.FechaRecibidaGroupBox = new System.Windows.Forms.GroupBox();
-            this.signoPesosLabel = new System.Windows.Forms.Label();
-            this.CodigoLabel = new System.Windows.Forms.Label();
             this.EfectivoGroupBox.SuspendLayout();
             this.TarjetaVisaGroupBox.SuspendLayout();
             this.FechaRecibidaGroupBox.SuspendLayout();
@@ -74,7 +74,7 @@ namespace ISW.Entidades
             // 
             this.MontoLabel.AutoSize = true;
             this.MontoLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MontoLabel.Location = new System.Drawing.Point(20, 40);
+            this.MontoLabel.Location = new System.Drawing.Point(12, 40);
             this.MontoLabel.Name = "MontoLabel";
             this.MontoLabel.Size = new System.Drawing.Size(181, 32);
             this.MontoLabel.TabIndex = 31;
@@ -105,7 +105,7 @@ namespace ISW.Entidades
             this.ConfirmarPedidoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.ConfirmarPedidoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmarPedidoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(212)))), ((int)(((byte)(113)))));
-            this.ConfirmarPedidoButton.Location = new System.Drawing.Point(295, 537);
+            this.ConfirmarPedidoButton.Location = new System.Drawing.Point(259, 563);
             this.ConfirmarPedidoButton.Name = "ConfirmarPedidoButton";
             this.ConfirmarPedidoButton.Size = new System.Drawing.Size(243, 49);
             this.ConfirmarPedidoButton.TabIndex = 32;
@@ -125,6 +125,17 @@ namespace ISW.Entidades
             this.EfectivoGroupBox.Size = new System.Drawing.Size(552, 73);
             this.EfectivoGroupBox.TabIndex = 33;
             this.EfectivoGroupBox.TabStop = false;
+            // 
+            // signoPesosLabel
+            // 
+            this.signoPesosLabel.AutoSize = true;
+            this.signoPesosLabel.BackColor = System.Drawing.Color.Transparent;
+            this.signoPesosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signoPesosLabel.Location = new System.Drawing.Point(502, 29);
+            this.signoPesosLabel.Name = "signoPesosLabel";
+            this.signoPesosLabel.Size = new System.Drawing.Size(18, 20);
+            this.signoPesosLabel.TabIndex = 36;
+            this.signoPesosLabel.Text = "$";
             // 
             // MontoValidacionLabel
             // 
@@ -182,6 +193,16 @@ namespace ISW.Entidades
             this.TarjetaVisaGroupBox.Size = new System.Drawing.Size(552, 225);
             this.TarjetaVisaGroupBox.TabIndex = 34;
             this.TarjetaVisaGroupBox.TabStop = false;
+            // 
+            // CodigoLabel
+            // 
+            this.CodigoLabel.AutoSize = true;
+            this.CodigoLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.CodigoLabel.Location = new System.Drawing.Point(209, 209);
+            this.CodigoLabel.Name = "CodigoLabel";
+            this.CodigoLabel.Size = new System.Drawing.Size(35, 13);
+            this.CodigoLabel.TabIndex = 11;
+            this.CodigoLabel.Text = "label1";
             // 
             // AdvertenciaTarjetaLabel
             // 
@@ -276,7 +297,7 @@ namespace ISW.Entidades
             this.VolverDireccionDestinoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.VolverDireccionDestinoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VolverDireccionDestinoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(255)))), ((int)(((byte)(241)))));
-            this.VolverDireccionDestinoButton.Location = new System.Drawing.Point(93, 537);
+            this.VolverDireccionDestinoButton.Location = new System.Drawing.Point(57, 563);
             this.VolverDireccionDestinoButton.Name = "VolverDireccionDestinoButton";
             this.VolverDireccionDestinoButton.Size = new System.Drawing.Size(197, 49);
             this.VolverDireccionDestinoButton.TabIndex = 37;
@@ -341,33 +362,12 @@ namespace ISW.Entidades
             this.FechaRecibidaGroupBox.TabIndex = 46;
             this.FechaRecibidaGroupBox.TabStop = false;
             // 
-            // signoPesosLabel
-            // 
-            this.signoPesosLabel.AutoSize = true;
-            this.signoPesosLabel.BackColor = System.Drawing.Color.Transparent;
-            this.signoPesosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signoPesosLabel.Location = new System.Drawing.Point(502, 29);
-            this.signoPesosLabel.Name = "signoPesosLabel";
-            this.signoPesosLabel.Size = new System.Drawing.Size(18, 20);
-            this.signoPesosLabel.TabIndex = 36;
-            this.signoPesosLabel.Text = "$";
-            // 
-            // CodigoLabel
-            // 
-            this.CodigoLabel.AutoSize = true;
-            this.CodigoLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.CodigoLabel.Location = new System.Drawing.Point(209, 209);
-            this.CodigoLabel.Name = "CodigoLabel";
-            this.CodigoLabel.Size = new System.Drawing.Size(35, 13);
-            this.CodigoLabel.TabIndex = 11;
-            this.CodigoLabel.Text = "label1";
-            // 
             // FormaPagoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(582, 598);
+            this.ClientSize = new System.Drawing.Size(603, 624);
             this.Controls.Add(this.FechaRecibidaGroupBox);
             this.Controls.Add(this.VolverDireccionDestinoButton);
             this.Controls.Add(this.TarjetaVisaGroupBox);
