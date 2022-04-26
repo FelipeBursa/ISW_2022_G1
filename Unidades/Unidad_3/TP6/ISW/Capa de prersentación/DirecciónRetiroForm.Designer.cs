@@ -73,7 +73,7 @@ namespace ISW.Entidades
             this.ObligatorioNumeroRetiroLabel.AutoSize = true;
             this.ObligatorioNumeroRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ObligatorioNumeroRetiroLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.ObligatorioNumeroRetiroLabel.Location = new System.Drawing.Point(9, 179);
+            this.ObligatorioNumeroRetiroLabel.Location = new System.Drawing.Point(100, 179);
             this.ObligatorioNumeroRetiroLabel.Name = "ObligatorioNumeroRetiroLabel";
             this.ObligatorioNumeroRetiroLabel.Size = new System.Drawing.Size(147, 21);
             this.ObligatorioNumeroRetiroLabel.TabIndex = 24;
@@ -85,7 +85,7 @@ namespace ISW.Entidades
             this.ObligatorioCalleRetiroLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.ObligatorioCalleRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ObligatorioCalleRetiroLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.ObligatorioCalleRetiroLabel.Location = new System.Drawing.Point(10, 108);
+            this.ObligatorioCalleRetiroLabel.Location = new System.Drawing.Point(100, 108);
             this.ObligatorioCalleRetiroLabel.Name = "ObligatorioCalleRetiroLabel";
             this.ObligatorioCalleRetiroLabel.Size = new System.Drawing.Size(147, 21);
             this.ObligatorioCalleRetiroLabel.TabIndex = 23;
@@ -124,9 +124,9 @@ namespace ISW.Entidades
             // CalleTextBox
             // 
             this.CalleTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalleTextBox.Location = new System.Drawing.Point(74, 70);
+            this.CalleTextBox.Location = new System.Drawing.Point(104, 70);
             this.CalleTextBox.Name = "CalleTextBox";
-            this.CalleTextBox.Size = new System.Drawing.Size(339, 35);
+            this.CalleTextBox.Size = new System.Drawing.Size(309, 35);
             this.CalleTextBox.TabIndex = 6;
             this.CalleTextBox.TextChanged += new System.EventHandler(this.CalleTextBox_TextChanged);
             // 

@@ -88,7 +88,7 @@ namespace ISW
             // 
             this.FotoLabel.AutoSize = true;
             this.FotoLabel.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FotoLabel.Location = new System.Drawing.Point(15, 16);
+            this.FotoLabel.Location = new System.Drawing.Point(6, 16);
             this.FotoLabel.Name = "FotoLabel";
             this.FotoLabel.Size = new System.Drawing.Size(180, 40);
             this.FotoLabel.TabIndex = 3;
@@ -141,7 +141,7 @@ namespace ISW
             this.ContinuarCiudadButtton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.ContinuarCiudadButtton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContinuarCiudadButtton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(212)))), ((int)(((byte)(113)))));
-            this.ContinuarCiudadButtton.Location = new System.Drawing.Point(330, 609);
+            this.ContinuarCiudadButtton.Location = new System.Drawing.Point(644, 365);
             this.ContinuarCiudadButtton.Name = "ContinuarCiudadButtton";
             this.ContinuarCiudadButtton.Size = new System.Drawing.Size(160, 51);
             this.ContinuarCiudadButtton.TabIndex = 6;
@@ -155,9 +155,9 @@ namespace ISW
             this.ImagenGroupBox.Controls.Add(this.ImagenPictureBox);
             this.ImagenGroupBox.Controls.Add(this.CargarImagenButton);
             this.ImagenGroupBox.Controls.Add(this.FotoLabel);
-            this.ImagenGroupBox.Location = new System.Drawing.Point(12, 419);
+            this.ImagenGroupBox.Location = new System.Drawing.Point(492, 51);
             this.ImagenGroupBox.Name = "ImagenGroupBox";
-            this.ImagenGroupBox.Size = new System.Drawing.Size(312, 241);
+            this.ImagenGroupBox.Size = new System.Drawing.Size(299, 292);
             this.ImagenGroupBox.TabIndex = 25;
             this.ImagenGroupBox.TabStop = false;
             // 
@@ -172,9 +172,9 @@ namespace ISW
             // 
             // ImagenPictureBox
             // 
-            this.ImagenPictureBox.Location = new System.Drawing.Point(25, 102);
+            this.ImagenPictureBox.Location = new System.Drawing.Point(13, 135);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
-            this.ImagenPictureBox.Size = new System.Drawing.Size(249, 115);
+            this.ImagenPictureBox.Size = new System.Drawing.Size(276, 140);
             this.ImagenPictureBox.TabIndex = 29;
             this.ImagenPictureBox.TabStop = false;
             // 
@@ -182,7 +182,7 @@ namespace ISW
             // 
             this.CargarImagenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.CargarImagenButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CargarImagenButton.Location = new System.Drawing.Point(25, 59);
+            this.CargarImagenButton.Location = new System.Drawing.Point(13, 64);
             this.CargarImagenButton.Name = "CargarImagenButton";
             this.CargarImagenButton.Size = new System.Drawing.Size(184, 35);
             this.CargarImagenButton.TabIndex = 4;
@@ -217,7 +217,7 @@ namespace ISW
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(525, 675);
+            this.ClientSize = new System.Drawing.Size(822, 446);
             this.Controls.Add(this.DescripcionGroupBox);
             this.Controls.Add(this.ContinuarCiudadButtton);
             this.Controls.Add(this.SeleccionarCiudadLabel);

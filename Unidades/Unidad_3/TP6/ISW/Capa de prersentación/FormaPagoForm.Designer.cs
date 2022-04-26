@@ -59,8 +59,9 @@ namespace ISW.Entidades
             this.FechaRecibidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.InmediatoRadioButton = new System.Windows.Forms.RadioButton();
             this.FechaRecibidaGroupBox = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.HoraMasketTextBox = new System.Windows.Forms.MaskedTextBox();
             this.FechaLabel = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.EfectivoGroupBox.SuspendLayout();
             this.TarjetaVisaGroupBox.SuspendLayout();
             this.FechaRecibidaGroupBox.SuspendLayout();
@@ -382,6 +383,8 @@ namespace ISW.Entidades
             // 
             // FechaRecibidaGroupBox
             // 
+            this.FechaRecibidaGroupBox.Controls.Add(this.label1);
+            this.FechaRecibidaGroupBox.Controls.Add(this.HoraMasketTextBox);
             this.FechaRecibidaGroupBox.Controls.Add(this.FechaLabel);
             this.FechaRecibidaGroupBox.Controls.Add(this.FechaRecibidaLabel);
             this.FechaRecibidaGroupBox.Controls.Add(this.ProgramadoRadioButton);
@@ -392,6 +395,26 @@ namespace ISW.Entidades
             this.FechaRecibidaGroupBox.Size = new System.Drawing.Size(593, 188);
             this.FechaRecibidaGroupBox.TabIndex = 46;
             this.FechaRecibidaGroupBox.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(309, 134);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Hora:";
+            // 
+            // HoraMasketTextBox
+            // 
+            this.HoraMasketTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoraMasketTextBox.Location = new System.Drawing.Point(366, 130);
+            this.HoraMasketTextBox.Mask = "00:00";
+            this.HoraMasketTextBox.Name = "HoraMasketTextBox";
+            this.HoraMasketTextBox.Size = new System.Drawing.Size(44, 29);
+            this.HoraMasketTextBox.TabIndex = 45;
+            this.HoraMasketTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // FechaLabel
             // 
@@ -404,21 +427,12 @@ namespace ISW.Entidades
             this.FechaLabel.Text = "*El pedido puede ser programado para un envío dentro de los próximos 7 días";
             this.FechaLabel.Visible = false;
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(486, 67);
-            this.maskedTextBox1.Mask = ",99$";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(40, 20);
-            this.maskedTextBox1.TabIndex = 47;
-            // 
             // FormaPagoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.ClientSize = new System.Drawing.Size(641, 624);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.FechaRecibidaGroupBox);
             this.Controls.Add(this.VolverDireccionDestinoButton);
             this.Controls.Add(this.TarjetaVisaGroupBox);
@@ -475,6 +489,7 @@ namespace ISW.Entidades
         private System.Windows.Forms.Label FechaTarjetaLabel;
         private System.Windows.Forms.Label MensajeTarjetaLabel;
         private System.Windows.Forms.Label FechaLabel;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox HoraMasketTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }

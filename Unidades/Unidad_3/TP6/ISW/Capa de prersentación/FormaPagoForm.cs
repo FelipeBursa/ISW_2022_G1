@@ -29,6 +29,7 @@ namespace ISW.Entidades
             MontoValidacionLabel.Visible        = false;
             CodigoLabel.Visible                 = false;
             InmediatoRadioButton.Checked        = true;
+            HoraMasketTextBox.Text              = DateTime.Now.ToString("hh:mm");
         }
 
         public void CargarCombo()
@@ -118,6 +119,7 @@ namespace ISW.Entidades
         {
             DateTime fechaSeleccionadaEntrega = FechaRecibidaDateTimePicker.Value;
             DateTime fechaHasta = DateTime.Today.AddDays( + 8);
+
             if ((fechaSeleccionadaEntrega > fechaHasta) || (fechaSeleccionadaEntrega < DateTime.Today))
             {
                 MessageBox.Show("Se debe ingresar una fecha dentro de los proximos 7 días",
@@ -125,8 +127,20 @@ namespace ISW.Entidades
             }
             else
             {
-                MessageBox.Show("Su pedido ha sido realizado con éxito, el delivery llegará a la brevedad",
-                       "Pedido Finalizado", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                bool ResultadoHora = ValidarHora();
+                if(ResultadoHora == false)
+                {
+                    MessageBox.Show("Se debe ingresar una hora válida",
+                     "Fecha Incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Su pedido ha sido realizado con éxito, el delivery llegará a la brevedad",
+                     "Pedido Finalizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //PrincipalForm ventana = new PrincipalForm();
+                    //ventana.Show();
+                    //this.Hide();
+                }
             }
         }
 
@@ -158,11 +172,14 @@ namespace ISW.Entidades
         private void InmediatoRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             FechaRecibidaDateTimePicker.Enabled = false;
+            HoraMasketTextBox.Enabled = false;
+
         }
 
         private void ProgramadoRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             FechaRecibidaDateTimePicker.Enabled = true;
+            HoraMasketTextBox.Enabled = true;
         }
 
         private void ValidarTarjeta()
@@ -280,6 +297,40 @@ namespace ISW.Entidades
             }
         }
 
+
+        private Boolean ValidarHora()
+        {
+            if (int.Parse(HoraMasketTextBox.Text[0].ToString()) < 3)
+            {
+                if (int.Parse(HoraMasketTextBox.Text[1].ToString()) <= 9)
+                {
+                    if (int.Parse(HoraMasketTextBox.Text[3].ToString()) <= 5)
+                    {
+                        if (int.Parse(HoraMasketTextBox.Text[4].ToString()) <= 9)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }

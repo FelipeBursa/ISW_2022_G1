@@ -15,8 +15,6 @@ namespace ISW.Entidades
     public partial class DirecciónRetiroForm : Form
     {
         private bool Validacion;
-        private string CalleRandom;
-        private int NumeroCalleRandom;
 
         public DirecciónRetiroForm()
         {
