@@ -12,7 +12,7 @@ namespace ISW.Entidades
 {
     public partial class FormaPagoForm : Form
     {
-        private float precio;
+        public float precio;
 
         private float distancia;
 
@@ -26,8 +26,8 @@ namespace ISW.Entidades
             EfectivoGroupBox.Visible            = false;
             TarjetaVisaGroupBox.Visible         = false;
             FechaRecibidaGroupBox.Visible       = false;
-            precio                              = 0;
-            distancia                           = 0;
+            MontoValidacionLabel.Visible        = false;
+            CodigoLabel.Visible = false;
             InmediatoRadioButton.Checked        = true;
         }
 
@@ -145,7 +145,7 @@ namespace ISW.Entidades
         private void CalcularCostoEnvio()
         {
             precio = distancia * 100;
-            MontoTextBox.Text = precio.ToString();
+            MontoTextBox.Text = precio.ToString()+",00 $";
         }
 
         private void InmediatoRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -162,16 +162,21 @@ namespace ISW.Entidades
         {
             AdvertenciaTarjetaLabel.Visible = false;
 
-            //if ((NumeroTarjetaTextBox.Text.Length < 16)||
-            if (NumeroTarjetaTextBox.Text[0] != '4')
+
+            if (NumeroTarjetaTextBox.Text != "")
             {
-                AdvertenciaTarjetaLabel.Visible = true;
-                AdvertenciaTarjetaLabel.Text = "* Ingresar una tarjeta VISA válida.";
+                if (NumeroTarjetaTextBox.Text[0] != '4')
+                {
+                    AdvertenciaTarjetaLabel.Visible = true;
+                    AdvertenciaTarjetaLabel.Text = "* Ingresar una tarjeta VISA válida.";
+                }
+                else
+                {
+                    AdvertenciaTarjetaLabel.Visible = false;
+                }
             }
-            else
-            {
-                AdvertenciaTarjetaLabel.Visible = false;
-            }
+                
+            
         }
 
         private void NumeroTarjetaTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -182,12 +187,95 @@ namespace ISW.Entidades
             }
             else
             {
-                MessageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
-                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                AdvertenciaTarjetaLabel.Text = "Solo se pueden ingresar caracteres numéricos";
+
+               // MessageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
+                //   MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Handled = true;
             }
 
+            
+        }
+
+        private void NumeroTarjetaTextBox_TextChanged(object sender, EventArgs e)
+        {
             ValidarTarjeta();
+        }
+
+        private void FormaPagoForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MontoPagaClienteTextBox_TextChanged(object sender, EventArgs e)
+        {
+            //precio = distancia * 100;
+            MontoValidacionLabel.Visible = false;
+            if (MontoPagaClienteTextBox.Text != "")
+            {
+                if (float.Parse(MontoPagaClienteTextBox.Text) < precio)
+                {
+                    MontoValidacionLabel.Visible = true;
+                    MontoValidacionLabel.Text = "El monto ingresado tiene que ser mayor o igual al precio de envio";
+                }
+                
+                
+            }
+        
+        }
+
+        private void MontoPagaClienteTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if ((Char.IsNumber(e.KeyChar)) || (Char.IsControl(e.KeyChar)))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                MontoValidacionLabel.Text = "Solo se pueden ingresar caracteres numéricos";
+                //ssageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
+                //essageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+
+           
+
+        }
+
+        private void asf(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void CodigoSeguridadTextBox_TextChanged(object sender, EventArgs e)
+        {
+            CodigoLabel.Visible = false;
+            if (CodigoSeguridadTextBox.Text != "")
+            {
+                if (CodigoSeguridadTextBox.Text.Length < 3)
+                {
+                    CodigoLabel.Visible = true;
+                    CodigoLabel.Text = "* Faltan campos del codigo de seguridad"; 
+                }
+            }
+        }
+
+        private void CodigoSeguridadTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CodigoLabel.Visible = false;
+            if ((Char.IsNumber(e.KeyChar)) || (Char.IsControl(e.KeyChar)))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                CodigoLabel.Visible = true;
+                CodigoLabel.Text = " * Solo se pueden ingresar caracteres numéricos";
+                //ssageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
+                //essageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
         }
     }
 }

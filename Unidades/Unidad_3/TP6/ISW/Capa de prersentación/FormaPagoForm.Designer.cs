@@ -35,6 +35,7 @@ namespace ISW.Entidades
             this.FormaPagoComboBox = new System.Windows.Forms.ComboBox();
             this.ConfirmarPedidoButton = new System.Windows.Forms.Button();
             this.EfectivoGroupBox = new System.Windows.Forms.GroupBox();
+            this.MontoValidacionLabel = new System.Windows.Forms.Label();
             this.TarjetaGroupBox = new System.Windows.Forms.GroupBox();
             this.MontoPagaClienteTextBox = new System.Windows.Forms.TextBox();
             this.MontoPagaClienteLabel = new System.Windows.Forms.Label();
@@ -54,6 +55,8 @@ namespace ISW.Entidades
             this.FechaRecibidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.InmediatoRadioButton = new System.Windows.Forms.RadioButton();
             this.FechaRecibidaGroupBox = new System.Windows.Forms.GroupBox();
+            this.signoPesosLabel = new System.Windows.Forms.Label();
+            this.CodigoLabel = new System.Windows.Forms.Label();
             this.EfectivoGroupBox.SuspendLayout();
             this.TarjetaVisaGroupBox.SuspendLayout();
             this.FechaRecibidaGroupBox.SuspendLayout();
@@ -112,14 +115,26 @@ namespace ISW.Entidades
             // 
             // EfectivoGroupBox
             // 
+            this.EfectivoGroupBox.Controls.Add(this.signoPesosLabel);
+            this.EfectivoGroupBox.Controls.Add(this.MontoValidacionLabel);
             this.EfectivoGroupBox.Controls.Add(this.TarjetaGroupBox);
             this.EfectivoGroupBox.Controls.Add(this.MontoPagaClienteTextBox);
             this.EfectivoGroupBox.Controls.Add(this.MontoPagaClienteLabel);
-            this.EfectivoGroupBox.Location = new System.Drawing.Point(18, 158);
+            this.EfectivoGroupBox.Location = new System.Drawing.Point(18, 136);
             this.EfectivoGroupBox.Name = "EfectivoGroupBox";
             this.EfectivoGroupBox.Size = new System.Drawing.Size(552, 73);
             this.EfectivoGroupBox.TabIndex = 33;
             this.EfectivoGroupBox.TabStop = false;
+            // 
+            // MontoValidacionLabel
+            // 
+            this.MontoValidacionLabel.AutoSize = true;
+            this.MontoValidacionLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.MontoValidacionLabel.Location = new System.Drawing.Point(359, 56);
+            this.MontoValidacionLabel.Name = "MontoValidacionLabel";
+            this.MontoValidacionLabel.Size = new System.Drawing.Size(35, 13);
+            this.MontoValidacionLabel.TabIndex = 35;
+            this.MontoValidacionLabel.Text = "label1";
             // 
             // TarjetaGroupBox
             // 
@@ -133,9 +148,12 @@ namespace ISW.Entidades
             // 
             this.MontoPagaClienteTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MontoPagaClienteTextBox.Location = new System.Drawing.Point(359, 25);
+            this.MontoPagaClienteTextBox.MaxLength = 5;
             this.MontoPagaClienteTextBox.Name = "MontoPagaClienteTextBox";
             this.MontoPagaClienteTextBox.Size = new System.Drawing.Size(172, 29);
             this.MontoPagaClienteTextBox.TabIndex = 30;
+            this.MontoPagaClienteTextBox.TextChanged += new System.EventHandler(this.MontoPagaClienteTextBox_TextChanged);
+            this.MontoPagaClienteTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MontoPagaClienteTextBox_KeyPress);
             // 
             // MontoPagaClienteLabel
             // 
@@ -149,6 +167,7 @@ namespace ISW.Entidades
             // 
             // TarjetaVisaGroupBox
             // 
+            this.TarjetaVisaGroupBox.Controls.Add(this.CodigoLabel);
             this.TarjetaVisaGroupBox.Controls.Add(this.AdvertenciaTarjetaLabel);
             this.TarjetaVisaGroupBox.Controls.Add(this.CodigoSeguridadTextBox);
             this.TarjetaVisaGroupBox.Controls.Add(this.FechaVencimientoDateTimePicker);
@@ -158,7 +177,7 @@ namespace ISW.Entidades
             this.TarjetaVisaGroupBox.Controls.Add(this.NumeroTarjetaLabel);
             this.TarjetaVisaGroupBox.Controls.Add(this.NombreTitularTarjetaTextBox);
             this.TarjetaVisaGroupBox.Controls.Add(this.NombreTitutarTarjetaLabel);
-            this.TarjetaVisaGroupBox.Location = new System.Drawing.Point(18, 133);
+            this.TarjetaVisaGroupBox.Location = new System.Drawing.Point(18, 136);
             this.TarjetaVisaGroupBox.Name = "TarjetaVisaGroupBox";
             this.TarjetaVisaGroupBox.Size = new System.Drawing.Size(552, 225);
             this.TarjetaVisaGroupBox.TabIndex = 34;
@@ -182,6 +201,8 @@ namespace ISW.Entidades
             this.CodigoSeguridadTextBox.Name = "CodigoSeguridadTextBox";
             this.CodigoSeguridadTextBox.Size = new System.Drawing.Size(326, 29);
             this.CodigoSeguridadTextBox.TabIndex = 9;
+            this.CodigoSeguridadTextBox.TextChanged += new System.EventHandler(this.CodigoSeguridadTextBox_TextChanged);
+            this.CodigoSeguridadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CodigoSeguridadTextBox_KeyPress);
             // 
             // FechaVencimientoDateTimePicker
             // 
@@ -209,6 +230,7 @@ namespace ISW.Entidades
             this.NumeroTarjetaTextBox.Name = "NumeroTarjetaTextBox";
             this.NumeroTarjetaTextBox.Size = new System.Drawing.Size(326, 29);
             this.NumeroTarjetaTextBox.TabIndex = 4;
+            this.NumeroTarjetaTextBox.TextChanged += new System.EventHandler(this.NumeroTarjetaTextBox_TextChanged);
             this.NumeroTarjetaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumeroTarjetaTextBox_KeyPress);
             // 
             // FechaVencimientoLabel
@@ -319,6 +341,27 @@ namespace ISW.Entidades
             this.FechaRecibidaGroupBox.TabIndex = 46;
             this.FechaRecibidaGroupBox.TabStop = false;
             // 
+            // signoPesosLabel
+            // 
+            this.signoPesosLabel.AutoSize = true;
+            this.signoPesosLabel.BackColor = System.Drawing.Color.Transparent;
+            this.signoPesosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signoPesosLabel.Location = new System.Drawing.Point(502, 29);
+            this.signoPesosLabel.Name = "signoPesosLabel";
+            this.signoPesosLabel.Size = new System.Drawing.Size(18, 20);
+            this.signoPesosLabel.TabIndex = 36;
+            this.signoPesosLabel.Text = "$";
+            // 
+            // CodigoLabel
+            // 
+            this.CodigoLabel.AutoSize = true;
+            this.CodigoLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.CodigoLabel.Location = new System.Drawing.Point(209, 209);
+            this.CodigoLabel.Name = "CodigoLabel";
+            this.CodigoLabel.Size = new System.Drawing.Size(35, 13);
+            this.CodigoLabel.TabIndex = 11;
+            this.CodigoLabel.Text = "label1";
+            // 
             // FormaPagoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +379,7 @@ namespace ISW.Entidades
             this.Controls.Add(this.FormaPagoComboBox);
             this.Name = "FormaPagoForm";
             this.Text = "Formas de pago";
+            this.Load += new System.EventHandler(this.FormaPagoForm_Load);
             this.EfectivoGroupBox.ResumeLayout(false);
             this.EfectivoGroupBox.PerformLayout();
             this.TarjetaVisaGroupBox.ResumeLayout(false);
@@ -374,5 +418,8 @@ namespace ISW.Entidades
         private System.Windows.Forms.RadioButton InmediatoRadioButton;
         private System.Windows.Forms.GroupBox FechaRecibidaGroupBox;
         private System.Windows.Forms.Label AdvertenciaTarjetaLabel;
+        private System.Windows.Forms.Label MontoValidacionLabel;
+        private System.Windows.Forms.Label signoPesosLabel;
+        private System.Windows.Forms.Label CodigoLabel;
     }
 }
