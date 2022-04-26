@@ -186,6 +186,7 @@ namespace ISW.Entidades
             this.Controls.Add(this.ContinuarDirecciónDestinoButton);
             this.Controls.Add(this.DireccionDestinoGroupBox);
             this.Name = "DirecciónDestinoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dirección de destino del pedido";
             this.DireccionDestinoGroupBox.ResumeLayout(false);
             this.DireccionDestinoGroupBox.PerformLayout();

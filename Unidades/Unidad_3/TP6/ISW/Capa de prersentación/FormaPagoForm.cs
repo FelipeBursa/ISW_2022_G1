@@ -27,7 +27,7 @@ namespace ISW.Entidades
             TarjetaVisaGroupBox.Visible         = false;
             FechaRecibidaGroupBox.Visible       = false;
             MontoValidacionLabel.Visible        = false;
-            CodigoLabel.Visible = false;
+            CodigoLabel.Visible                 = false;
             InmediatoRadioButton.Checked        = true;
         }
 
@@ -50,7 +50,9 @@ namespace ISW.Entidades
             {
                 if (FormaPagoComboBox.SelectedIndex == 1)
                 {
-                    if ((MontoPagaClienteTextBox.Text.Equals("")) || (float.Parse(MontoPagaClienteTextBox.Text.ToString()) < 0))
+                    if ((MontoPagaClienteTextBox.Text.Equals("")) 
+                        || (float.Parse(MontoPagaClienteTextBox.Text.ToString()) < 0) 
+                        ||  ((float.Parse(MontoPagaClienteTextBox.Text.ToString())) < precio))
                     {
                         MessageBox.Show("Ingresar un monto válido",
                             "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -71,18 +73,24 @@ namespace ISW.Entidades
                     }
                     else
                     {
-                        //ValidarTarjeta();
-                        DateTime fechaVencimiento = FechaVencimientoDateTimePicker.Value;
-
-                        if (fechaVencimiento < DateTime.Today)
+                        if ((MensajeTarjetaLabel.Visible == true) || (CodigoSeguridadTextBox.Text.Length < 3))
                         {
-                            MessageBox.Show("La tarjeta ingresada se encuentra vencida",
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("La tarjeta no es valida",
+                            "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
-                            MessageBox.Show("Su pedido ha sido realizado con éxito, el delivery llegará a la brevedad",
-                              "Pedido Finalizado", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                            DateTime fechaVencimiento = FechaVencimientoDateTimePicker.Value;
+
+                            if (fechaVencimiento < DateTime.Today)
+                            {
+                                MessageBox.Show("La tarjeta ingresada se encuentra vencida",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else
+                            {
+                                ValidarFechas();
+                            }
                         }
                     }
                 }
@@ -108,9 +116,8 @@ namespace ISW.Entidades
 
         private void ValidarFechas()
         {
-            
             DateTime fechaSeleccionadaEntrega = FechaRecibidaDateTimePicker.Value;
-            DateTime fechaHasta = DateTime.Today.AddDays( + 7);
+            DateTime fechaHasta = DateTime.Today.AddDays( + 8);
             if ((fechaSeleccionadaEntrega > fechaHasta) || (fechaSeleccionadaEntrega < DateTime.Today))
             {
                 MessageBox.Show("Se debe ingresar una fecha dentro de los proximos 7 días",
@@ -139,12 +146,12 @@ namespace ISW.Entidades
         {
             Random GeneradorRandom = new Random();
             distancia = GeneradorRandom.Next(1, 52);  
-            
         }
 
         private void CalcularCostoEnvio()
         {
             precio = distancia * 100;
+            //MontoTextBox.Text = precio.ToString();
             MontoTextBox.Text = precio.ToString()+",00 $";
         }
 
@@ -160,51 +167,17 @@ namespace ISW.Entidades
 
         private void ValidarTarjeta()
         {
-            AdvertenciaTarjetaLabel.Visible = false;
-
-
             if (NumeroTarjetaTextBox.Text != "")
             {
-                if (NumeroTarjetaTextBox.Text[0] != '4')
+                if ((NumeroTarjetaTextBox.Text[0] != '4') || (NumeroTarjetaTextBox.Text.Length < 16))
                 {
-                    AdvertenciaTarjetaLabel.Visible = true;
-                    AdvertenciaTarjetaLabel.Text = "* Ingresar una tarjeta VISA válida.";
+                    MensajeTarjetaLabel.Visible = true;
                 }
                 else
                 {
-                    AdvertenciaTarjetaLabel.Visible = false;
+                    MensajeTarjetaLabel.Visible = false;
                 }
             }
-                
-            
-        }
-
-        private void NumeroTarjetaTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((Char.IsNumber(e.KeyChar)) || (Char.IsControl(e.KeyChar)))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                AdvertenciaTarjetaLabel.Text = "Solo se pueden ingresar caracteres numéricos";
-
-               // MessageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
-                //   MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Handled = true;
-            }
-
-            
-        }
-
-        private void NumeroTarjetaTextBox_TextChanged(object sender, EventArgs e)
-        {
-            ValidarTarjeta();
-        }
-
-        private void FormaPagoForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void MontoPagaClienteTextBox_TextChanged(object sender, EventArgs e)
@@ -217,35 +190,22 @@ namespace ISW.Entidades
                 {
                     MontoValidacionLabel.Visible = true;
                     MontoValidacionLabel.Text = "El monto ingresado tiene que ser mayor o igual al precio de envio";
-                }
-                
-                
-            }
-        
+                }              
+            }        
         }
 
         private void MontoPagaClienteTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
             if ((Char.IsNumber(e.KeyChar)) || (Char.IsControl(e.KeyChar)))
             {
                 e.Handled = false;
+                MontoValidacionLabel.Visible = false;
             }
             else
             {
                 MontoValidacionLabel.Text = "Solo se pueden ingresar caracteres numéricos";
-                //ssageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
-                //essageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Handled = true;
             }
-
-           
-
-        }
-
-        private void asf(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
 
         private void CodigoSeguridadTextBox_TextChanged(object sender, EventArgs e)
@@ -272,8 +232,50 @@ namespace ISW.Entidades
             {
                 CodigoLabel.Visible = true;
                 CodigoLabel.Text = " * Solo se pueden ingresar caracteres numéricos";
-                //ssageBox.Show("Solo se pueden ingresar caracteres numéricos", "Advertencia",
-                //essageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+            }
+        }
+
+        private void FechaVencimientoDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaSeleccionada = FechaVencimientoDateTimePicker.Value;
+            if (fechaSeleccionada < DateTime.Today)
+            {
+                FechaTarjetaLabel.Visible = true;
+            }
+            else
+            {
+                FechaTarjetaLabel.Visible = false;
+            }
+        }
+
+        private void FechaRecibidaDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaSeleccionadaEntrega = FechaRecibidaDateTimePicker.Value;
+            DateTime fechaHasta = DateTime.Today.AddDays(+8);
+            if ((fechaSeleccionadaEntrega > fechaHasta) || (fechaSeleccionadaEntrega < DateTime.Today))
+            {
+                FechaLabel.Visible = true;
+            }
+            else
+            {
+                FechaLabel.Visible = false;
+            }
+        }
+
+        private void NumeroTarjetaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ValidarTarjeta();
+        }
+
+        private void NumeroTarjetaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Char.IsNumber(e.KeyChar)) || (Char.IsControl(e.KeyChar)))
+            {
+                e.Handled = false;
+            }
+            else
+            {
                 e.Handled = true;
             }
         }

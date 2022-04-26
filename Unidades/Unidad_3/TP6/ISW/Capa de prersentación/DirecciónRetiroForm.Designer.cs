@@ -72,6 +72,7 @@ namespace ISW.Entidades
             // 
             this.ObligatorioNumeroRetiroLabel.AutoSize = true;
             this.ObligatorioNumeroRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioNumeroRetiroLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.ObligatorioNumeroRetiroLabel.Location = new System.Drawing.Point(6, 197);
             this.ObligatorioNumeroRetiroLabel.Name = "ObligatorioNumeroRetiroLabel";
             this.ObligatorioNumeroRetiroLabel.Size = new System.Drawing.Size(147, 21);
@@ -81,7 +82,9 @@ namespace ISW.Entidades
             // ObligatorioCalleRetiroLabel
             // 
             this.ObligatorioCalleRetiroLabel.AutoSize = true;
+            this.ObligatorioCalleRetiroLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(164)))), ((int)(((byte)(108)))));
             this.ObligatorioCalleRetiroLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligatorioCalleRetiroLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(113)))), ((int)(((byte)(82)))));
             this.ObligatorioCalleRetiroLabel.Location = new System.Drawing.Point(7, 126);
             this.ObligatorioCalleRetiroLabel.Name = "ObligatorioCalleRetiroLabel";
             this.ObligatorioCalleRetiroLabel.Size = new System.Drawing.Size(147, 21);
@@ -251,6 +254,7 @@ namespace ISW.Entidades
             this.Controls.Add(this.OpcionDireccionLabel);
             this.Controls.Add(this.DirecciónRetiroGroupBox);
             this.Name = "DirecciónRetiroForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dirección de retiro del producto";
             this.DirecciónRetiroGroupBox.ResumeLayout(false);
             this.DirecciónRetiroGroupBox.PerformLayout();

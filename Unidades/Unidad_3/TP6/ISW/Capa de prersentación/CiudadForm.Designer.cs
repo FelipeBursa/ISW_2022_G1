@@ -225,6 +225,7 @@ namespace ISW
             this.Controls.Add(this.CiudadGroupBox);
             this.Controls.Add(this.DeliveryEatLabel);
             this.Name = "CiudadForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeliverEat";
             this.Load += new System.EventHandler(this.InterfazPedidoDeLoQueSea_Load);
             this.CiudadGroupBox.ResumeLayout(false);
