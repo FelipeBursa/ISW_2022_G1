@@ -19,6 +19,7 @@ namespace ISW.Entidades
 
         private void DeLoQueSeaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ///Continua a la siguiente ventana del pedido
             CiudadForm ventana = new CiudadForm();
             ventana.Show();
             this.Hide();

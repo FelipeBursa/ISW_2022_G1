@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace ISW.Entidades
 {
     public partial class DirecciónRetiroForm : Form
@@ -23,7 +21,7 @@ namespace ISW.Entidades
             Validacion                      = false;                     
         }
         
-        //Hace visible la imagen y oculta el gruop box
+        ///Hace visible la imagen y oculta el group box
         private void MapaInteractivoRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             CalleTextBox.Text               = "";
@@ -33,7 +31,7 @@ namespace ISW.Entidades
             MapaInteractivoButton.Enabled   = true;
         }
 
-        //Hace visible el group box y oculta la imagen
+        ///Hace visible el group box y oculta la imagen
         private void LlenarCamposRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             DirecciónRetiroGroupBox.Enabled = true;
@@ -42,21 +40,24 @@ namespace ISW.Entidades
         
         private void ValidarCampos()
         {
-            if ((ReferenciaTextBox.Text.Length > 100) || (CalleTextBox.Text.Equals("")) || 
+            ///Validación de los campos obligatorios
+            if ((ReferenciaTextBox.Text.Length > 100) || (CalleTextBox.Text.Equals("")) ||
                 (NumeroCalleTextBox.Text.Equals("")))
             {
                 MessageBox.Show("Por favor complete todos los campos obligatorios.", "Advertencia",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 if (CalleTextBox.Text.Equals(""))
                 {
                     CalleTextBox.Focus();
                 }
+            
                 if (NumeroCalleTextBox.Text.Equals(""))
                 {
                     NumeroCalleTextBox.Focus();
                 }
             }
+
             else
             {              
                 Validacion = true;
@@ -66,7 +67,7 @@ namespace ISW.Entidades
         private void ContinuarDirecciónButton_Click(object sender, EventArgs e)
         {
             ValidarCampos();
-
+            ///Validación para continuar a la siguiente ventana
             if (Validacion == true)
             {
                 DirecciónDestinoForm ventana = new DirecciónDestinoForm();
@@ -77,6 +78,7 @@ namespace ISW.Entidades
 
         private void VolverDirecciónRetiroButton_Click(object sender, EventArgs e)
         {
+            ///Método para volver a la ventana anterior
             CiudadForm ventana = new CiudadForm();
             ventana.Show();
             this.Hide();
@@ -89,6 +91,7 @@ namespace ISW.Entidades
 
         private void GenerarUbicacion ()
         {
+            ///Generación aleatoria de ubicaciones para el mapa 
             List<String> Calles = new List<String>();
             Calles.Add("Macaon");
             Calles.Add("9 de Julio");
@@ -100,33 +103,36 @@ namespace ISW.Entidades
             Calles.Add("Lima");
             Calles.Add("Tucuman");
 
-            Random GeneradorRandom = new Random();
-            CalleTextBox.Text = Calles [GeneradorRandom.Next(0,8)];
-
+            Random GeneradorRandom  = new Random();
+            CalleTextBox.Text       = Calles [GeneradorRandom.Next(0,8)];
             Random GeneradorRandom2 = new Random();
             NumeroCalleTextBox.Text = (GeneradorRandom2.Next(100, 8000)).ToString();
         }
 
         private void NumeroCalleTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ///Validación dinámica para caracteres númericos
             if ((Char.IsNumber(e.KeyChar)) || (Char.IsControl(e.KeyChar)))
             {
                 e.Handled = false;
             }
+
             else
             {
                 ObligatorioNumeroRetiroLabel.Text = "Solo se pueden ingresar caracteres numéricos";
-                e.Handled = true;
+                e.Handled                         = true;
             }
         }
 
         private void CalleTextBox_TextChanged(object sender, EventArgs e)
         {
+            ///Validación que muestra o no un mensaje de obligatoriedad
             if (CalleTextBox.Text.Length == 0)
             {
-                ObligatorioCalleRetiroLabel.Text = "*Campo obligatorio ";
+                ObligatorioCalleRetiroLabel.Text    = "*Campo obligatorio ";
                 ObligatorioCalleRetiroLabel.Visible = true;
             }
+
             else
             {
                 ObligatorioCalleRetiroLabel.Visible = false;
@@ -135,11 +141,13 @@ namespace ISW.Entidades
 
         private void NumeroCalleTextBox_TextChanged(object sender, EventArgs e)
         {
+            ///Validación que muestra o no un mensaje de obligatoriedad
             if (NumeroCalleTextBox.Text.Length == 0)
             {
-                ObligatorioNumeroRetiroLabel.Text = "*Campo obligatorio ";
+                ObligatorioNumeroRetiroLabel.Text    = "*Campo obligatorio ";
                 ObligatorioNumeroRetiroLabel.Visible = true;
             }
+
             else
             {
                 ObligatorioNumeroRetiroLabel.Visible = false;
