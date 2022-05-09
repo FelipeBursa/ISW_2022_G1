@@ -48,55 +48,55 @@
   <ItemGroup>
     <Compile Include="Entidades\Ciudad.cs" />
     <Compile Include="Entidades\Direccion.cs" />
-    <Compile Include="Capa de prersentación\DirecciónRetiroForm.cs">
+    <Compile Include="CapaPresentación\DirecciónRetiroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa de prersentación\DirecciónRetiroForm.Designer.cs">
+    <Compile Include="CapaPresentación\DirecciónRetiroForm.Designer.cs">
       <DependentUpon>DirecciónRetiroForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Capa de prersentación\DirecciónDestinoForm.cs">
+    <Compile Include="CapaPresentación\DirecciónDestinoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa de prersentación\DirecciónDestinoForm.Designer.cs">
+    <Compile Include="CapaPresentación\DirecciónDestinoForm.Designer.cs">
       <DependentUpon>DirecciónDestinoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Capa de prersentación\FormaPagoForm.cs">
+    <Compile Include="CapaPresentación\FormaPagoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa de prersentación\FormaPagoForm.Designer.cs">
+    <Compile Include="CapaPresentación\FormaPagoForm.Designer.cs">
       <DependentUpon>FormaPagoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\GestorPedidoDeLoQueSea.cs" />
     <Compile Include="Entidades\Pedido.cs" />
-    <Compile Include="Capa de prersentación\PrincipalForm.cs">
+    <Compile Include="CapaPresentación\PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa de prersentación\PrincipalForm.Designer.cs">
+    <Compile Include="CapaPresentación\PrincipalForm.Designer.cs">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Solicitante.cs" />
-    <Compile Include="Capa de prersentación\CiudadForm.cs">
+    <Compile Include="CapaPresentación\CiudadForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa de prersentación\CiudadForm.Designer.cs">
+    <Compile Include="CapaPresentación\CiudadForm.Designer.cs">
       <DependentUpon>CiudadForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Tarjeta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Capa de prersentación\CiudadForm.resx">
+    <EmbeddedResource Include="CapaPresentación\CiudadForm.resx">
       <DependentUpon>CiudadForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capa de prersentación\DirecciónRetiroForm.resx">
+    <EmbeddedResource Include="CapaPresentación\DirecciónRetiroForm.resx">
       <DependentUpon>DirecciónRetiroForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capa de prersentación\DirecciónDestinoForm.resx">
+    <EmbeddedResource Include="CapaPresentación\DirecciónDestinoForm.resx">
       <DependentUpon>DirecciónDestinoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capa de prersentación\FormaPagoForm.resx">
+    <EmbeddedResource Include="CapaPresentación\FormaPagoForm.resx">
       <DependentUpon>FormaPagoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capa de prersentación\PrincipalForm.resx">
+    <EmbeddedResource Include="CapaPresentación\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

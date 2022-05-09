@@ -21,9 +21,9 @@ namespace ISW
         public CiudadForm()
         {
             InitializeComponent();
-            TamañoLabel.Visible = false;
+            TamañoLabel.Visible         = false;
             DescripcionGroupBox.Visible = false;
-            ImagenGroupBox.Visible = false;
+            ImagenGroupBox.Visible      = false;
         }
 
         private void CargarDatos()
