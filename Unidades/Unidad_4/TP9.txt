@@ -1,0 +1,2 @@
+Hicimos casos de prueba con el métodO de caja negra
+ pero no era evaluable

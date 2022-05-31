@@ -1,0 +1,2 @@
+Hicimos casos de prueba con el método de caja blanca pero
+no era evaluable
